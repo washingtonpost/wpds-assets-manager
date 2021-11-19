@@ -1,5 +1,5 @@
 expandProps: "end"
-dimensions: true
+dimensions: false
 ref: true
 memo: true
 titleProp: true
@@ -9,4 +9,4 @@ svgo: true
 prettier: true
 svgoConfig: {removeTitle: false}
 replaceAttrValues: { "#111": "currentColor"}
-icon: true
+icon: false
