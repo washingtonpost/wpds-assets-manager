@@ -1,0 +1,24 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "./assets"
+  ],
+  "scripts": {
+    "all:dev": "make all-dev",
+    "build": "npx @svgr/cli -d assets/dist assets/src",
+    "main-publish": "make main-publish",
+    "main-version": "make main-version",
+    "experimental-version": "make experimental-version",
+    "experimental-publish": "make experimental-publish"
+  },
+  "engines": {
+    "yarn": "yarn NO LONGER USED - use npm instead.",
+    "npm": "^8",
+    "node": "^14"
+  },
+  "prettier": {}
+}

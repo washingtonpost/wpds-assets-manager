@@ -1,0 +1,12 @@
+expandProps: "end"
+dimensions: true
+ref: true
+memo: true
+titleProp: true
+typescript: true
+filenameCase: kebab
+svgo: true
+prettier: true
+svgoConfig: {removeTitle: false}
+replaceAttrValues: { "#111": "currentColor"}
+icon: true

@@ -7,5 +7,20 @@
 
 Package names
 
-* "@washingtonpost/wpds-icons"
-* "@washingtonpost/wpds-logos"
+* "@washingtonpost/wpds-assets"
+
+folder structure
+
+````
+assets/src/<asset>.svg
+assets/dist/<asset>.svg
+```
+
+npx svgr --title-prop --template svgr-template.js --no-svgo --memo -d dist/react assets
+
+
+- [ ] make sure typescript works like modules and shit
+
+## set up
+npm install
+npm run build. the TS react components will be in assets/dist
