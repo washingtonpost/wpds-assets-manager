@@ -31,7 +31,28 @@ npm run build. the TS react components will be in assets/dist
 www: washingtonpost.com/wpds/assets/<icon-name>?color=$blue400&size=16
 origin: wpds-assets-manager.preview.now.washingtonpost.com/api/assets/<icon-name>?color=$blue400&size=16
 
-
 ## to do ideas
 
 - the svg asset will respond to dark mode / light mode
+
+## Using
+
+```
+npm i -D @washingtonpost/wpds-assets
+```
+
+```jsx
+import { Elections } from "@washingtonpost/wpds-assets";
+
+export const MyPage = () => {
+  return <Elections />;
+};
+```
+
+or
+
+```jsx
+export const MyPage = () => {
+  return <img src="https://assets.wpds.washingtonpost.com/elections" />;
+};
+```
