@@ -105,3 +105,8 @@ dist
 
 assets/react
 assets/*.tsx
+
+dist
+public
+
+.*cache

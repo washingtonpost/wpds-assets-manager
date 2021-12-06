@@ -9,3 +9,15 @@ main-publish:
 
 main-version:
 	npx lerna version --conventional-commits --yes --conventional-graduate --create-release github
+
+copy-assets-into-public-directory:
+	mkdir -p public
+	cp -r ./src/* ./public
+
+build:
+	make copy-assets-into-public-directory
+	next build
+
+dev:
+	make copy-assets-into-public-directory
+	next dev
