@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.3 73.2">
-  <title>Elections</title>
-  <path style="fill:#a7a9ac;mix-blend-mode:multiply;" d="M53.84,16.2A16.2,16.2,0,1,1,37.65,0,16.19,16.19,0,0,1,53.84,16.2Z"></path>
-  <path style="fill:#009fdf;mix-blend-mode:multiply;" d="M75.3,31.78a16.2,16.2,0,1,1-16.21-16.2A16.2,16.2,0,0,1,75.3,31.78Z"></path>
-  <path style="fill:#ed1c24;mix-blend-mode:multiply;" d="M32.4,31.78a16.2,16.2,0,1,1-16.2-16.2A16.2,16.2,0,0,1,32.4,31.78Z"></path>
-  <path style="fill:#4978bc;mix-blend-mode:multiply;" d="M40.59,57a16.2,16.2,0,1,1-16.2-16.2A16.2,16.2,0,0,1,40.59,57Z"></path>
-  <path style="fill:#da202c;mix-blend-mode:multiply;" d="M67.1,57A16.2,16.2,0,1,1,50.91,40.8,16.2,16.2,0,0,1,67.1,57Z"></path>
-  <polygon style="fill:#fff;" points="37.65 50.13 21.76 61.05 27.49 42.75 11.94 30.83 31.37 30.81 37.65 12.15 43.92 30.81 63.36 30.83 47.81 42.75 53.53 61.05"></polygon>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.3 73.2"><path style="fill:#a7a9ac;mix-blend-mode:multiply" d="M53.84 16.2A16.2 16.2 0 1 1 37.65 0a16.19 16.19 0 0 1 16.19 16.2Z"/><path style="fill:#009fdf;mix-blend-mode:multiply" d="M75.3 31.78a16.2 16.2 0 1 1-16.21-16.2 16.2 16.2 0 0 1 16.21 16.2Z"/><path style="fill:#ed1c24;mix-blend-mode:multiply" d="M32.4 31.78a16.2 16.2 0 1 1-16.2-16.2 16.2 16.2 0 0 1 16.2 16.2Z"/><path style="fill:#4978bc;mix-blend-mode:multiply" d="M40.59 57a16.2 16.2 0 1 1-16.2-16.2A16.2 16.2 0 0 1 40.59 57Z"/><path style="fill:#da202c;mix-blend-mode:multiply" d="M67.1 57a16.2 16.2 0 1 1-16.19-16.2A16.2 16.2 0 0 1 67.1 57Z"/><path style="fill:#fff" d="M37.65 50.13 21.76 61.05l5.73-18.3-15.55-11.92 19.43-.02 6.28-18.66 6.27 18.66 19.44.02-15.55 11.92 5.72 18.3z"/></svg>
