@@ -30,8 +30,8 @@
   },
   "prettier": {},
   "dependencies": {
-    "@washingtonpost/ui-theme": "^0.1.0-experimental.0",
-    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.5",
+    "@washingtonpost/ui-theme": "experimental",
+    "@washingtonpost/wpds-ui-kit": "experimental",
     "ac-colors": "^1.4.3",
     "next": "^12.0.4",
     "react": "^17.0.2",
