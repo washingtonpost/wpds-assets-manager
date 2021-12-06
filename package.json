@@ -33,7 +33,7 @@
     "@washingtonpost/ui-theme": "experimental",
     "@washingtonpost/wpds-ui-kit": "experimental",
     "ac-colors": "^1.4.3",
-    "next": "^12.0.4",
+    "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rgb-hex": "^4.0.0"
