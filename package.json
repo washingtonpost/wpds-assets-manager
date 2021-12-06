@@ -28,11 +28,6 @@
     "build": "make build",
     "semantic-release": "semantic-release"
   },
-  "engines": {
-    "yarn": "yarn NO LONGER USED - use npm instead.",
-    "npm": "^8",
-    "node": "^14"
-  },
   "prettier": {},
   "dependencies": {
     "@washingtonpost/ui-theme": "^0.1.0-experimental.0",
