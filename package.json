@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/wpds-assets",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "",
   "files": [
     "dist",
@@ -52,8 +52,13 @@
   },
   "release": {
     "branches": [
-      "main",
-      "next"
+      {
+        "name": "main"
+      },
+      {
+        "name": "next",
+        "channel": "next"
+      }
     ]
   }
 }
