@@ -25,5 +25,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PAT }}
         run: npx semantic-release
