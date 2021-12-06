@@ -23,6 +23,8 @@ jobs:
           npm install
           npm run build
           npx semantic-release
+          git commit -am "chore: release"
+          git push origin main
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
