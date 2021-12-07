@@ -3,18 +3,18 @@
   "version": "1.0.4",
   "description": "",
   "exports": {
-    "./": "./dist/"
+    "./": "./asset/"
   },
   "targets": {
     "./": {
       "isLibrary": true,
       "includeNodeModules": false,
-      "outputFormat": "esmodule"
+      "outputFormat": "commonjs",
+      "distDir": "asset"
     }
   },
-  "type": "module",
   "files": [
-    "dist",
+    "asset",
     "assets",
     "README.md"
   ],
