@@ -110,3 +110,4 @@ dist
 public
 
 .*cache
+*.trace
