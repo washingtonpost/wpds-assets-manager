@@ -11,6 +11,4 @@ svgoConfig: { removeTitle: false }
 replaceAttrValues: { "#111": "currentColor" }
 icon: false
 index: false
-exportType: "named"
-namedExport: "Asset"
-jsxRuntime: "automatic"
+jsxRuntime: "classic"

@@ -3,7 +3,7 @@ copy-assets-into-public-directory:
 	cp -r ./src/* ./public
 
 svg-to-react:
-	npx @svgr/cli --out-dir assets src --index-template index-template.js
+	npx @svgr/cli --out-dir assets src
 
 build:
 	make svg-to-react

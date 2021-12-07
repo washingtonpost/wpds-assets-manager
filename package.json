@@ -8,7 +8,9 @@
   "targets": {
     "./": {
       "isLibrary": true,
-      "includeNodeModules": false,
+      "includeNodeModules": {
+        "react": false
+      },
       "outputFormat": "commonjs",
       "distDir": "asset"
     }
