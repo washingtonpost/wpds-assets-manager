@@ -9,8 +9,8 @@ build:
 	make svg-to-react
 	npx -p typescript tsc asset/*.tsx --declaration --allowJs --emitDeclarationOnly --jsx preserve
 	npx parcel build asset/*.tsx --no-cache
-	# make copy-assets-into-public-directory
-	# next build
+	make copy-assets-into-public-directory
+	next build
 
 dev:
 	make copy-assets-into-public-directory
