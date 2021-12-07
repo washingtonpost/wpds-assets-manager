@@ -1,58 +1,37 @@
 # WPDS Assets Manager (Logos, Icons, Illustrations)
 
-1. SVGS are not bound to sizes (remove width and height properties) prefer viewBox
-2. Icon component will have fixed sizes
-3. Approval process 1 week.
+## Contributing
 
-Package names
+1. Approval process 1 week.
+1. Add your SVG asset to the `./src` directory.
 
-- "@washingtonpost/wpds-assets"
+## Using Asset Manager
 
-folder structure
+### Installation
 
-```
-assets/src/<asset>.svg
-assets/dist/<asset>.svg
+```sh
+npm i @washingtonpost/wpds-assets
 ```
 
-npx svgr --title-prop --template svgr-template.js --no-svgo --memo -d dist/react assets
-
-- [ ] make sure typescript works like modules and shit
-
-## set up
-
-npm install
-npm run build. the TS react components will be in assets/dist
-
-## assets service idea
-
-- [ ] use edge function
-
-www: washingtonpost.com/wpds/assets/<icon-name>?color=$blue400&size=16
-origin: wpds-assets-manager.preview.now.washingtonpost.com/api/assets/<icon-name>?color=$blue400&size=16
-
-## to do ideas
-
-- the svg asset will respond to dark mode / light mode
-
-## Using
-
-```
-npm i -D @washingtonpost/wpds-assets
-```
+### Code Examples
 
 ```jsx
-import { Elections } from "@washingtonpost/wpds-assets";
+import { Icon } from "@washingtonpost/ui-icon";
+import Garlic from "@washingtonpost/wpds-assets/asset/garlic";
 
-export const MyPage = () => {
-  return <Elections />;
-};
+function MyStuff() {
+  return (
+    <Icon label="Garlic" size="16">
+      <Garlic />
+    </Icon>
+  );
+}
 ```
 
 or
 
 ```jsx
 export const MyPage = () => {
-  return <img src="https://assets.wpds.washingtonpost.com/elections" />;
+  return <img src="https://assets.build.washingtonpost.com/garlic" />;
 };
 ```
