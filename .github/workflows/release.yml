@@ -22,6 +22,8 @@ jobs:
           node-version: "14.18.1"
           registry-url: "https://registry.npmjs.org"
           cache: npm
+      - name: Build
+        run: npm run build
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         with:
@@ -34,3 +36,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_PAT }}
+      - name: Commit Package.json Changes
+        run: |
+          git config --global user.email "github-actions-bot@users.noreply.github.com"
+          git config --global user.name "site-eng-github-actions"
+          git commit -am "chore: release"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
