@@ -12,6 +12,7 @@
       "outputFormat": "esmodule"
     }
   },
+  "type": "module",
   "files": [
     "dist",
     "assets",
