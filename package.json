@@ -2,9 +2,6 @@
   "name": "@washingtonpost/wpds-assets",
   "version": "1.0.4",
   "description": "",
-  "exports": {
-    "./": "./asset/"
-  },
   "targets": {
     "./": {
       "isLibrary": true,
@@ -17,7 +14,6 @@
   },
   "files": [
     "asset",
-    "assets",
     "README.md"
   ],
   "author": "artmsilva <artmsilva@gmail.com>",
