@@ -1,22 +1,16 @@
-experimental-version:
-	lerna version --conventional-commits --conventional-prerelease --preid=experimental --sign-git-tag=experimental --no-changelog --yes
-
-experimental-publish:
-	lerna publish from-git --canary --preid experimental --pre-dist-tag experimental --npm-tag experimental --yes
-
-main-publish: 
-	npx lerna publish from-git --yes --no-git-reset
-
-main-version:
-	npx lerna version --conventional-commits --yes --conventional-graduate --create-release github
-
 copy-assets-into-public-directory:
 	mkdir -p public
 	cp -r ./src/* ./public
 
+svg-to-react:
+	npx @svgr/cli --out-dir dist src --index-template index-template.js
+
 build:
-	make copy-assets-into-public-directory
-	next build
+	make svg-to-react
+	npx -p typescript tsc dist/*.tsx --declaration --allowJs --emitDeclarationOnly --jsx preserve
+	npx parcel build dist/*.tsx --no-cache
+	# make copy-assets-into-public-directory
+	# next build
 
 dev:
 	make copy-assets-into-public-directory
