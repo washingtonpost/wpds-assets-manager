@@ -8,7 +8,7 @@
       "includeNodeModules": {
         "react": false
       },
-      "outputFormat": "esmodule",
+      "outputFormat": "commonjs",
       "distDir": "asset"
     }
   },
