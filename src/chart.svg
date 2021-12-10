@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
     <title>Chart</title>
     <path id="graphic" d="M3,13V2H2V14H14V13ZM8,5H7v7H8ZM6,8H5v4H6Zm4-5H9v9h1Zm2,6H11v3h1Z" />
 </svg>
