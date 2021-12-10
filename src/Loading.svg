@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
+    <title>Loading</title>
+    <defs>
+        <style>.cls-1{fill:#231f20;fill-rule:evenodd;}</style>
+    </defs>
+    <path d="M15,8A7,7,0,0,1,1,8H2.08A5.92,5.92,0,1,0,8,2.08V1A7,7,0,0,1,15,8Z" />
+</svg>

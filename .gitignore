@@ -111,3 +111,5 @@ public
 
 .*cache
 *.trace
+
+.DS_Store

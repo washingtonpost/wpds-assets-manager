@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
+    <title>Search</title>
+    <path d="M7,11.52A4.5,4.5,0,1,1,11.52,7,4.51,4.51,0,0,1,7,11.52Zm0-8A3.5,3.5,0,1,0,10.52,7,3.5,3.5,0,0,0,7,3.52Z" />
+    <rect x="11.5" y="9.18" width="1" height="5.65" transform="translate(-4.97 12) rotate(-45)" />
+</svg>
