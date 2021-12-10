@@ -1,1 +1,5 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#121212;}</style></defs><path id="video-solid" class="cls-1" d="M9,4H3A1,1,0,0,0,2,5v6a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1V5A1,1,0,0,0,9,4ZM13,4.79,10.67,6.35v3.3L13,11.23a.67.67,0,0,0,.93-.17.63.63,0,0,0,.12-.37V5.33a.66.66,0,0,0-.67-.66A.64.64,0,0,0,13,4.79Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
+    <title>Video</title>
+    <path d="M9,5v6H2V5H9m1-1H1v8h9V4Z" />
+    <path d="M14,5.61v4.76l-2-1V6.62l2-1M15,4,11,6v4l4,2V4Z" />
+</svg>

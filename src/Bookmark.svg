@@ -1,1 +1,4 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}</style><clipPath id="clip-path"><rect class="cls-1" x="3" y="1.5" width="10" height="13"/></clipPath></defs><g class="cls-2"><g id="bookmark"><path id="Path_7" data-name="Path 7" d="M12,2.5v10L8,9.8,4,12.5V2.5Zm1-1H3V14.38l1.56-1.05L8,11l3.44,2.32L13,14.38Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
+    <title>Bookmark</title>
+    <path d="M12,3v8.92L8.62,9.22,8,8.72l-.62.5L4,11.92V3h8m1-1H3V14l5-4,5,4V2Z" />
+</svg>

@@ -1,1 +1,8 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g id="Info"><path id="Path_16" data-name="Path 16" d="M8,1A7,7,0,1,0,13,3.05,7,7,0,0,0,8,1ZM8,14a6,6,0,1,1,4.24-1.76A6,6,0,0,1,8,14Z"/><path id="Path_17" data-name="Path 17" d="M8.5,4.5h-1v1h1Z"/><path id="Path_18" data-name="Path 18" d="M8.5,7.5v-1h-2v1h1V11h-1v1h3V11h-1Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
+    <title>Info</title>
+    <g id="Info">
+        <path id="Path_16" data-name="Path 16" d="M8,1A7,7,0,1,0,13,3.05,7,7,0,0,0,8,1ZM8,14a6,6,0,1,1,4.24-1.76A6,6,0,0,1,8,14Z" />
+        <path id="Path_17" data-name="Path 17" d="M8.5,4.5h-1v1h1Z" />
+        <path id="Path_18" data-name="Path 18" d="M8.5,7.5v-1h-2v1h1V11h-1v1h3V11h-1Z" />
+    </g>
+</svg>

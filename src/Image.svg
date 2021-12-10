@@ -1,1 +1,6 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}</style><clipPath id="clip-path"><rect class="cls-1" x="1.5" y="3" width="13" height="10"/></clipPath></defs><g class="cls-2"><g id="image"><path id="Path_13" data-name="Path 13" d="M12.62,6.22l-.71-.71-.7.71L8.38,9.05l-.77-.77-.77-.77-.71.83-2.52,3L2.23,13H14.5V8.1l-.29-.29ZM13.5,12H4.38L6.9,9l1.48,1.47,3.53-3.53L13.5,8.51Z"/><path id="Path_14" data-name="Path 14" d="M13.5,3H3.5a1,1,0,0,0-1,1v7.22L3.5,10V4h10V5.66l1,1V4A1,1,0,0,0,13.5,3Z"/><path id="Path_15" data-name="Path 15" d="M5.5,7a1,1,0,1,0-1-1A1,1,0,0,0,5.5,7Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="#000000">
+    <title>Image</title>
+    <polygon points="14 2 14 8 13 7 13 3 3 3 3 10 2 11 2 2 14 2" />
+    <circle cx="5.5" cy="5.5" r="1.5" />
+    <path d="M11.11,8.52,13,10.4V13H4.08l2-2.5,1.21,1.21.82.81.69-.92,2.31-3.08M11,7,8,11,6,9,2,14H14V10L11,7Z" />
+</svg>
