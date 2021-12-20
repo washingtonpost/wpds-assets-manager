@@ -3,7 +3,7 @@
 ## Contributing
 
 1. Approval process 1 week.
-1. Add your SVG asset to the `./src` directory.
+1. Add your SVG asset to the `./src` directory. Please use kebab case like so "my-awesome-icon". Not "MY_AWESOME_ICON". Every character should use lower case and a word should be delimted by a "-".
 
 ## Using Asset Manager
 
