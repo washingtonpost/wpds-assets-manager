@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { NextApiRequest, NextApiResponse } from "next";
 import rgbHex from "rgb-hex";
-import { theme } from "@washingtonpost/ui-theme";
+import { theme } from "@washingtonpost/wpds-ui-kit";
 
 /**
  * Serves SVGs Assets from the assets folder
@@ -23,10 +23,9 @@ export default function handler(
      */
     if (req.query.fill) {
       try {
-        asset = asset.replace(
-          /fill="(.*?)"/g,
-          `fill="#${rgbHex(theme.colors[String(req.query.fill)].value)}"`
-        );
+        const rgb = theme.colors[String(req.query.fill)]?.value;
+
+        asset = asset.replace(/fill="(.*?)"/g, `fill="#${rgbHex(rgb)}"`);
       } catch (error) {
         console.error(error);
       }

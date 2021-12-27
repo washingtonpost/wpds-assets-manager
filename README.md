@@ -18,8 +18,7 @@ npm i @washingtonpost/wpds-assets
 An example of how to use our Theme and Icon component to create an icon for the screen.
 
 ```jsx
-import { Icon } from "@washingtonpost/ui-icon";
-import { theme } from "@washingtonpost/ui-theme";
+import { theme, Icon } from "@washingtonpost/wpds-ui-kit";
 import Garlic from "@washingtonpost/wpds-assets/asset/garlic";
 
 function MyStuff() {

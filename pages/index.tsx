@@ -1,4 +1,4 @@
-import { styled } from "@washingtonpost/ui-theme";
+import { styled } from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../asset/index";
 
 const AssetContainer = styled("article", {
