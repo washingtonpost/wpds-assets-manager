@@ -60,7 +60,7 @@
     "url": "https://github.com/WPMedia/wpds-assets-manager.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "release": {
     "branches": [
