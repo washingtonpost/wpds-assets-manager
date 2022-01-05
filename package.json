@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/wpds-assets",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "",
   "targets": {
     "./": {
@@ -38,7 +38,7 @@
   "peerDependencies": {
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2",
-    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.14"
+    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.20"
   },
   "scripts": {
     "dev": "make dev",
@@ -48,7 +48,7 @@
   "prettier": {},
   "dependencies": {
     "@babel/runtime": "^7.13.10",
-    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.14",
+    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.20",
     "ac-colors": "^1.4.3",
     "next": "latest",
     "react": "^16.0.1 || ^17.0.2",
