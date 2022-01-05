@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#000000">
-    <title>Camera</title>
-    <path id="Path_9" data-name="Path 9" d="M14,3H11.25l-.45-.6L10.5,2h-5l-.3.4L4.75,3H1V13H15V3Zm0,9H2V4H5.25L6,3h4l.75,1H14Z" />
-    <path id="Path_10" data-name="Path 10" d="M8,5a3,3,0,1,0,3,3A3,3,0,0,0,8,5Zm0,5a2,2,0,1,1,2-2,2,2,0,0,1-2,2Z" />
-    <path id="Path_11" data-name="Path 11" d="M13,5H12V6h1Z" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#000000"><title>Camera</title><path id="camera_svg__Path_9" data-name="Path 9" d="M14,3H11.25l-.45-.6L10.5,2h-5l-.3.4L4.75,3H1V13H15V3Zm0,9H2V4H5.25L6,3h4l.75,1H14Z"/><path id="camera_svg__Path_10" data-name="Path 10" d="M8,5a3,3,0,1,0,3,3A3,3,0,0,0,8,5Zm0,5a2,2,0,1,1,2-2,2,2,0,0,1-2,2Z"/><path id="camera_svg__Path_11" data-name="Path 11" d="M13,5H12V6h1Z"/></svg>
