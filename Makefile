@@ -6,6 +6,7 @@ svg-to-react:
 	npx @svgr/cli --out-dir asset src
 
 build:
+	npx svgo src/*.svg
 	make svg-to-react
 	npx -p typescript tsc asset/*.tsx --declaration --allowJs --emitDeclarationOnly --jsx preserve
 	npx parcel build asset/*.tsx --no-cache
