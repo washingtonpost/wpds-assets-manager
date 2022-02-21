@@ -113,3 +113,6 @@ public
 *.trace
 
 .DS_Store
+build
+.yalc
+yalc.lock

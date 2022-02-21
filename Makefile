@@ -3,13 +3,12 @@ copy-assets-into-public-directory:
 	cp -r ./src/* ./public
 
 svg-to-react:
-	npx @svgr/cli --out-dir asset src
+	npx @svgr/cli --out-dir build src
 
-build:
+build-library:
 	npx svgo src/*.svg
 	make svg-to-react
-	npx -p typescript tsc asset/*.tsx --declaration --allowJs --emitDeclarationOnly --jsx preserve
-	npx parcel build asset/*.tsx --no-cache
+	npx tsup build/*.tsx --minify --format esm,cjs --dts --sourcemap --legacy-output --outDir asset
 	make copy-assets-into-public-directory
 	npx next build
 

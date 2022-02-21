@@ -1,5 +1,5 @@
 import { styled } from "@washingtonpost/wpds-ui-kit";
-import * as AllAssets from "./../asset/index";
+import * as AllAssets from "./../asset/esm/index";
 
 const AssetContainer = styled("article", {
   border: "1px solid $subtle",

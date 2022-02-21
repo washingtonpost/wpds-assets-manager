@@ -2,16 +2,11 @@
   "name": "@washingtonpost/wpds-assets",
   "version": "1.1.14",
   "description": "",
-  "targets": {
-    "./": {
-      "isLibrary": true,
-      "includeNodeModules": {
-        "react": false
-      },
-      "outputFormat": "commonjs",
-      "distDir": "asset"
-    }
-  },
+  "source": "src/index.ts",
+  "main": "asset/index.js",
+  "module": "asset/esm/index.js",
+  "types": "asset/index.d.ts",
+  "sideEffects": false,
   "files": [
     "asset",
     "README.md"
@@ -23,35 +18,32 @@
     "@babel/plugin-proposal-private-methods": "^7.16.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.16.0",
     "@babel/plugin-transform-typescript": "^7.16.1",
-    "@parcel/babel-plugin-transform-runtime": "^2.0.1",
-    "@parcel/packager-ts": "^2.0.1",
-    "@parcel/transformer-typescript-types": "^2.0.1",
     "@svgr/cli": "^6.1.1",
+    "@types/node": "^17.0.18",
     "@types/react": "^17.0.37",
-    "parcel": "^2.0.1",
+    "ac-colors": "^1.4.3",
+    "next": "latest",
     "pascal-case": "^3.1.2",
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2",
+    "rgb-hex": "^4.0.0",
     "semantic-release": "^18.0.1",
     "svgo": "^2.8.0",
-    "typescript": "^4.5.2",
-    "rgb-hex": "^4.0.0",
-    "next": "latest",
-    "ac-colors": "^1.4.3"
+    "tsup": "^5.11.13",
+    "typescript": "^4.5.5"
   },
   "peerDependencies": {
+    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.20",
     "react": "^16.0.1 || ^17.0.2",
-    "react-dom": "^16.0.1 || ^17.0.2",
-    "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.20"
+    "react-dom": "^16.0.1 || ^17.0.2"
   },
   "scripts": {
     "dev": "make dev",
-    "build": "make build",
+    "build": "make build-library",
     "semantic-release": "semantic-release"
   },
   "prettier": {},
   "dependencies": {
-    "@babel/runtime": "^7.13.10",
     "@washingtonpost/wpds-ui-kit": "^0.1.0-experimental.20",
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2"
@@ -89,5 +81,6 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
-  }
+  },
+  "packageManager": "npm@8.5.1"
 }

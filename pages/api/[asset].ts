@@ -7,10 +7,7 @@ import { theme } from "@washingtonpost/wpds-ui-kit";
 /**
  * Serves SVGs Assets from the assets folder
  */
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-): void {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     let asset = fs.readFileSync(
       `${path.resolve("./public")}/${String(req.query.asset)}.svg`,
