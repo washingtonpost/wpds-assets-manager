@@ -1,32 +1,35 @@
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../asset/esm/index";
 
-const AssetContainer = Kit.styled("article", {
+const Section = Kit.styled("section", {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+  gridGap: "1rem",
+});
+
+const AssetContainer = Kit.styled("div", {
   border: "1px solid $subtle",
-  background: "$accessible",
+  background: Kit.theme.colors.subtle,
   padding: "$100",
-  borderRadius: "$100",
+  borderRadius: "$075",
 });
 
 const Homepage = () => {
   return (
-    <>
+    <Section>
       <h1>WPDS Assets Manager</h1>
-
       {Object.keys(AllAssets).map((Asset) => {
         const Component = AllAssets[Asset];
         return (
-          <section key={Asset}>
+          <article key={Asset}>
+            <h2>{Asset}</h2>
             <AssetContainer>
-              <h2>{Asset}</h2>
-              <Kit.Icon label={Asset}>
-                <Component />
-              </Kit.Icon>
+              <Component />
             </AssetContainer>
-          </section>
+          </article>
         );
       })}
-    </>
+    </Section>
   );
 };
 
