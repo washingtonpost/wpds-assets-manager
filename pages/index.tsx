@@ -1,7 +1,7 @@
-import { styled } from "@washingtonpost/wpds-ui-kit";
+import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../asset/esm/index";
 
-const AssetContainer = styled("article", {
+const AssetContainer = Kit.styled("article", {
   border: "1px solid $subtle",
   background: "$accessible",
   padding: "$100",
@@ -19,7 +19,9 @@ const Homepage = () => {
           <section key={Asset}>
             <AssetContainer>
               <h2>{Asset}</h2>
-              <Component />
+              <Kit.Icon label={Asset}>
+                <Component />
+              </Kit.Icon>
             </AssetContainer>
           </section>
         );
