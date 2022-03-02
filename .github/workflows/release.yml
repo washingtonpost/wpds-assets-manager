@@ -12,18 +12,21 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+
+      - uses: actions/setup-node@v2.5.1
         with:
-          node-version: "14.18.1"
+          node-version-file: ".nvmrc"
           registry-url: "https://registry.npmjs.org"
+          always-auth: true
           cache: npm
-      - name: Install dependencies
-        run: npm ci
+
+      - name: Install npm dependencies
+        run: |
+          npm i -g npm@8.3.0
+          npm ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
