@@ -5,6 +5,7 @@ const Section = Kit.styled("section", {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
   gridGap: "1rem",
+  color: "dodgerBlue",
 });
 
 const AssetContainer = Kit.styled("div", {
