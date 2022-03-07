@@ -3,6 +3,7 @@ module.exports = {
     "convertStyleToAttrs",
     "inlineStyles",
     "prefixIds",
+    "removeDimensions",
 
     {
       name: "removeUselessStrokeAndFill",
