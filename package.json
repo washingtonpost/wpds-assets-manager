@@ -22,7 +22,9 @@
     "@svgr/cli": "^6.1.1",
     "@types/node": "^17.0.18",
     "@types/react": "^17.0.37",
+    "@washingtonpost/wpds-ui-kit": "latest",
     "ac-colors": "^1.4.3",
+    "make-dir": "^3.1.0",
     "next": "latest",
     "pascal-case": "^3.1.2",
     "react": "^16.0.1 || ^17.0.2",
@@ -31,8 +33,7 @@
     "semantic-release": "^18.0.1",
     "svgo": "^2.8.0",
     "tsup": "^5.11.13",
-    "typescript": "4.5.5",
-    "@washingtonpost/wpds-ui-kit": "0.4.4"
+    "typescript": "4.5.5"
   },
   "peerDependencies": {
     "react": "^16.0.1 || ^17.0.2",
