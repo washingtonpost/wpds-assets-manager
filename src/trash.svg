@@ -1,0 +1,6 @@
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <title>Trash can</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 1v2h3v1H2V3h3V1h6ZM6 3V2h4v1H6Z" fill="#111" />
+    <path d="M13 5h-1v9H4V5H3v10h10V5Z" fill="#111" />
+    <path d="M7 7v5H6V7h1ZM10 12V7H9v5h1Z" fill="#111" />
+</svg>
