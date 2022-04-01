@@ -11,6 +11,7 @@ const AssetContainer = Kit.styled("div", {
   border: "1px solid $subtle",
   background: Kit.theme.colors.subtle,
   padding: "$100",
+  color: Kit.theme.colors.red100,
   borderRadius: "$075",
 });
 
