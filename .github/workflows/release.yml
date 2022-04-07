@@ -28,9 +28,9 @@ jobs:
           npm i -g npm@8.3.0
           npm ci
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          NPM_TOKEN: ${{ secrets.NPM_PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Build
         run: npm run build
       - name: Semantic Release
@@ -42,9 +42,9 @@ jobs:
             @semantic-release/npm
             @semantic-release/github
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          NPM_TOKEN: ${{ secrets.NPM_PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Commit Package.json Changes
         run: |
           git config --global user.email "github-actions-bot@users.noreply.github.com"
