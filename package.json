@@ -77,5 +77,5 @@
       "@semantic-release/github"
     ]
   },
-  "packageManager": "npm@8.3.0"
+  "packageManager": "npm@8.11.0"
 }
