@@ -28,11 +28,9 @@
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2",
     "rgb-hex": "^4.0.0",
-    "semantic-release": "^18.0.1",
     "svgo": "^2.8.0",
     "tsup": "^5.11.13",
-    "typescript": "4.5.5",
-    "@washingtonpost/wpds-ui-kit": "0.4.4"
+    "typescript": "4.5.5"
   },
   "peerDependencies": {
     "react": "^16.0.1 || ^17.0.2",
@@ -40,11 +38,11 @@
   },
   "scripts": {
     "dev": "make dev",
-    "build": "make build-library",
-    "semantic-release": "semantic-release"
+    "build": "make build-library"
   },
   "prettier": {},
   "dependencies": {
+    "@washingtonpost/wpds-ui-kit": "^0.13.0",
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2"
   },
