@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - main
-      - next
-      - next-major
-      - beta
-      - alpha
 jobs:
   release:
     name: Release
@@ -32,23 +28,18 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Build
         run: npm run build
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
+      - uses: google-github-actions/release-please-action@v3
         with:
-          extra_plugins: |
-            @semantic-release/commit-analyzer
-            @semantic-release/release-notes-generator
-            @semantic-release/npm
-            @semantic-release/github
+          release-type: node
+          package-name: release-please-action
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      - name: Commit Package.json Changes
-        run: |
-          git config --global user.email "github-actions-bot@users.noreply.github.com"
-          git config --global user.name "site-eng-github-actions"
-          git commit -am "chore: release"
-          git push origin main
+      - run: |
+          npm install
+          npm run build
+          npm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
