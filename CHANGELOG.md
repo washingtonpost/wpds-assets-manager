@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.9.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.8.2...v1.9.0) (2022-08-16)
+
+
+### Features
+
+* new and updated icons ([03ab91b](https://github.com/washingtonpost/wpds-assets-manager/commit/03ab91ba2a09b6bca45be053f2d1c19f7aff00b8))
+
+
+### Bug Fixes
+
+* add package-name to release script ([1f4cc49](https://github.com/washingtonpost/wpds-assets-manager/commit/1f4cc49d7ceb3f0ddb499997c9f30bbaf2d2c07a))
+
 ## [1.8.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.8.1...v1.8.2) (2022-08-05)
 
 
