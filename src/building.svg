@@ -1,1 +1,15 @@
-<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2V14H14V5H11V2H2ZM10 3H3V13H6V12H7V13H10V3ZM13 13H11V6H13V13Z" fill="#111111"/><path d="M5 4H4V5H5V4Z" fill="#111111"/><path d="M7 4H6V5H7V4Z" fill="#111111"/><path d="M9 4H8V5H9V4Z" fill="#111111"/><path d="M5 6H4V7H5V6Z" fill="#111111"/><path d="M7 6H6V7H7V6Z" fill="#111111"/><path d="M9 6H8V7H9V6Z" fill="#111111"/><path d="M5 8H4V9H5V8Z" fill="#111111"/><path d="M7 8H6V9H7V8Z" fill="#111111"/><path d="M9 8H8V9H9V8Z" fill="#111111"/><path d="M5 10H4V11H5V10Z" fill="#111111"/><path d="M7 10H6V11H7V10Z" fill="#111111"/><path d="M9 10H8V11H9V10Z" fill="#111111"/></svg>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 2V14H14V5H11V2H2ZM10 3H3V13H6V12H7V13H10V3ZM13 13H11V6H13V13Z" fill="#111111"/>
+<path d="M5 4H4V5H5V4Z" fill="#111111"/>
+<path d="M7 4H6V5H7V4Z" fill="#111111"/>
+<path d="M9 4H8V5H9V4Z" fill="#111111"/>
+<path d="M5 6H4V7H5V6Z" fill="#111111"/>
+<path d="M7 6H6V7H7V6Z" fill="#111111"/>
+<path d="M9 6H8V7H9V6Z" fill="#111111"/>
+<path d="M5 8H4V9H5V8Z" fill="#111111"/>
+<path d="M7 8H6V9H7V8Z" fill="#111111"/>
+<path d="M9 8H8V9H9V8Z" fill="#111111"/>
+<path d="M5 10H4V11H5V10Z" fill="#111111"/>
+<path d="M7 10H6V11H7V10Z" fill="#111111"/>
+<path d="M9 10H8V11H9V10Z" fill="#111111"/>
+</svg>
