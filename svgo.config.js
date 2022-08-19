@@ -4,7 +4,11 @@ module.exports = {
     "inlineStyles",
     "prefixIds",
     "removeDimensions",
-
+    "reusePaths",
+    "mergePaths",
+    "convertShapeToPath",
+    "convertTransform",
+    "convertPathData",
     {
       name: "removeUselessStrokeAndFill",
       params: {

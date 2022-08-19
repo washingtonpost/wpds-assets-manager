@@ -7,7 +7,7 @@ typescript: true
 filenameCase: kebab
 svgo: true
 prettier: true
-svgoConfig: { removeTitle: false, mergePaths: true, convertShapeToPath: true }
+svgoConfig: { removeTitle: false, mergePaths: true}
 replaceAttrValues: { "#111": "currentColor" }
 svgProps: { fill: "currentColor" }
 icon: false
