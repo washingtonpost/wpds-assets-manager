@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.9.0...v1.10.0) (2022-08-19)
+
+
+### Features
+
+* updated and new media icons ([e16f92e](https://github.com/washingtonpost/wpds-assets-manager/commit/e16f92e10b852fc0d9fdf5f5bdcfd29e89d660ec))
+
 ## [1.9.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.8.2...v1.9.0) (2022-08-16)
 
 
