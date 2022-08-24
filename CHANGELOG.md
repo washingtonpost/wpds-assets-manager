@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.10.0...v1.11.0) (2022-08-24)
+
+
+### Features
+
+* add diamond icon ([f922ae7](https://github.com/washingtonpost/wpds-assets-manager/commit/f922ae7be1b17b21a12ec6d78ce3ddc8ab029b02))
+
 ## [1.10.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.9.0...v1.10.0) (2022-08-19)
 
 
