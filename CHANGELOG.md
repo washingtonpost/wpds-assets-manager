@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.11.0...v1.12.0) (2022-09-01)
+
+
+### Features
+
+* new wp & email-filled and resized reddit icon ([09b81ef](https://github.com/washingtonpost/wpds-assets-manager/commit/09b81ef68d52862a3f6b4e12dc0e08297246c64d))
+
 ## [1.11.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.10.0...v1.11.0) (2022-08-24)
 
 
