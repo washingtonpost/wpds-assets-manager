@@ -12,6 +12,10 @@ build-library:
 	make copy-assets-into-public-directory
 	# npx next build
 
+build-all:
+	make build-library
+	npx next build
+
 dev:
 	make copy-assets-into-public-directory
 	npx next dev
