@@ -11,6 +11,10 @@
     ".": {
       "import": "./asset/",
       "require": "./asset/"
+    },
+    "./asset": {
+      "import": "./asset/",
+      "require": "./asset/"
     }
   },
   "sideEffects": false,
@@ -27,6 +31,7 @@
     "@types/react": "^17.0.37",
     "@vitejs/plugin-react": "^2.2.0",
     "@washingtonpost/wpds-ui-kit": "^0.13.0",
+    "@washingtonpost/wpds-assets": "file:./",
     "glob": "^8.0.3",
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2",

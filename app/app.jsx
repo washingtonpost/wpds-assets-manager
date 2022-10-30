@@ -1,5 +1,5 @@
 import * as Kit from "@washingtonpost/wpds-ui-kit";
-import * as AllAssets from "./../asset";
+import * as AllAssets from "@washingtonpost/wpds-assets";
 
 const Section = Kit.styled("section", {
   display: "grid",
