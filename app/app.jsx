@@ -1,5 +1,5 @@
 import * as Kit from "@washingtonpost/wpds-ui-kit";
-import * as AllAssets from "./../asset/esm/index";
+import * as AllAssets from "./../asset";
 
 const Section = Kit.styled("section", {
   display: "grid",
@@ -15,7 +15,7 @@ const AssetContainer = Kit.styled("div", {
   borderRadius: "$075",
 });
 
-const Homepage = () => {
+const App = () => {
   return (
     <Section>
       <h1>WPDS Assets Manager</h1>
@@ -34,4 +34,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default App;
