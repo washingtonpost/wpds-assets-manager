@@ -6,6 +6,7 @@
   "source": "src/index.ts",
   "main": "asset/index.js",
   "types": "asset/index.d.ts",
+  "type": "module",
   "module": "./asset/index.js",
   "exports": {
     ".": {
