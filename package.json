@@ -3,11 +3,8 @@
   "version": "1.12.0",
   "description": "WPDS Assets Manager",
   "homepage": "https://build.washingtonpost.com/foundations/wam",
-  "source": "src/index.ts",
-  "main": "asset/index.js",
-  "types": "asset/index.d.ts",
-  "type": "module",
-  "module": "./asset/index.js",
+  "main": "./asset/index.js",
+  "module": "./asset/index.mjs",
   "exports": {
     ".": {
       "import": "./asset/",
