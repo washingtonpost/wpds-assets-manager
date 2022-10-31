@@ -1,6 +1,6 @@
+import React from 'react';
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
-import Bell from "@washingtonpost/wpds-assets/asset/bell"
 
 const Section = Kit.styled("section", {
   display: "grid",
@@ -20,7 +20,6 @@ const App = () => {
   return (
     <Section>
       <h1>WPDS Assets Manager</h1>
-      <Bell />
       {Object.keys(AllAssets).map((Asset) => {
         const Component = AllAssets[Asset];
         return (
