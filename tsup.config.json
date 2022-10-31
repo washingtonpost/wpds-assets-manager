@@ -1,0 +1,8 @@
+{
+  "footer": {
+      "js": "module.exports = module.exports.default;"
+  },
+  "output": {
+    "exports": "default"
+  }
+}
