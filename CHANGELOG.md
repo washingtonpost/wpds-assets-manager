@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.12.0...v1.12.1) (2022-10-31)
+
+
+### Bug Fixes
+
+* make sure module exports uses default ([#53](https://github.com/washingtonpost/wpds-assets-manager/issues/53)) ([7347f89](https://github.com/washingtonpost/wpds-assets-manager/commit/7347f894fe8c6821d2af8f23016ce36cdddb91ed))
+
 ## [1.12.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.11.0...v1.12.0) (2022-09-01)
 
 
