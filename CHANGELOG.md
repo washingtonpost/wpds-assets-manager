@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.12.1...v1.12.2) (2022-11-01)
+
+
+### Bug Fixes
+
+* turn off config for index ts file ([b674dc8](https://github.com/washingtonpost/wpds-assets-manager/commit/b674dc84e3b76c18f0a4bc956c259bc23348f70d))
+
 ## [1.12.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.12.0...v1.12.1) (2022-10-31)
 
 
