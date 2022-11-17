@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.12.2...v1.13.0) (2022-11-17)
+
+
+### Features
+
+* add qatar world cup logos ([58ff180](https://github.com/washingtonpost/wpds-assets-manager/commit/58ff180843f5ff2872f427e9195b5bc92c98da1a))
+* add qatar world cup logos ([163a0fc](https://github.com/washingtonpost/wpds-assets-manager/commit/163a0fcd74a44fdfe6956dd9c9131b7ba4f7b504))
+
 ## [1.12.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.12.1...v1.12.2) (2022-11-01)
 
 
