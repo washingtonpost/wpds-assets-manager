@@ -4,7 +4,8 @@
   "description": "WPDS Assets Manager",
   "homepage": "https://build.washingtonpost.com/foundations/wam",
   "main": "./asset/index.js",
-  "module": "./asset/index.js",
+  "module": "./asset/esm/index.js",
+  "types": "./asset/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist",
@@ -24,7 +25,6 @@
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2",
     "svgo": "^2.8.0",
-    "tsup": "^6.3.0",
     "typescript": "^4.8.4",
     "vite": "^3.2.1"
   },
