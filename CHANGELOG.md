@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.13.0...v1.14.0) (2022-11-28)
+
+
+### Features
+
+* refactored build process to allow for tree shaking by apps ([7a1223e](https://github.com/washingtonpost/wpds-assets-manager/commit/7a1223eb092465ebf1a2adca6c75547fbab4a7fd))
+
 ## [1.13.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.12.2...v1.13.0) (2022-11-17)
 
 
