@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.14.0...v1.15.0) (2022-11-29)
+
+
+### Features
+
+* add trending and forward icons ([b857c99](https://github.com/washingtonpost/wpds-assets-manager/commit/b857c99d2a14bb8adec66ec482e5398e74d872e7))
+
 ## [1.14.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.13.0...v1.14.0) (2022-11-28)
 
 
