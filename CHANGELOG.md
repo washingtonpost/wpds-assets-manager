@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.15.0...v1.16.0) (2023-01-09)
+
+
+### Features
+
+* add mastodon icon ([#63](https://github.com/washingtonpost/wpds-assets-manager/issues/63)) ([17a5405](https://github.com/washingtonpost/wpds-assets-manager/commit/17a5405f35a15414dd66413303d354c6cc0c7f31))
+
 ## [1.15.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.14.0...v1.15.0) (2022-11-29)
 
 
