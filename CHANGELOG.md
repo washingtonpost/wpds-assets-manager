@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.16.0...v1.17.0) (2023-01-31)
+
+
+### Features
+
+* add On the Record, Pin, and eBook icons ([9a5f006](https://github.com/washingtonpost/wpds-assets-manager/commit/9a5f0065ae8287754618ab8d5cf9a65b25e6b62c))
+
 ## [1.16.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.15.0...v1.16.0) (2023-01-09)
 
 
