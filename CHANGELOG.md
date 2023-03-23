@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.17.0...v1.18.0) (2023-03-23)
+
+
+### Features
+
+* add offer, digital-archives and crop svg files [SRED-100] ([#68](https://github.com/washingtonpost/wpds-assets-manager/issues/68)) ([3190ac1](https://github.com/washingtonpost/wpds-assets-manager/commit/3190ac1444b8f237b9c0ea9c3bef245cd6c5f94d))
+
 ## [1.17.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.16.0...v1.17.0) (2023-01-31)
 
 
