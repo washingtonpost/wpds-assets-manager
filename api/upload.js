@@ -7,9 +7,7 @@ const repo = "wpds-assets-manager";
 
 const createBranchAndPullRequest = async () => {
   // read the file to upload
-  const filePath = "/tmp/boop.svg";
-  const fileName = path.basename(filePath);
-  const fileContent = fs.readFileSync(filePath);
+  const fileContent = fs.readFileSync("/tmp/boop.svg");
 
   octokit.repos
     .createOrUpdateFile({
