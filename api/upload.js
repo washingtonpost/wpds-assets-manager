@@ -17,7 +17,7 @@ const upload = async (req, res) => {
     .createOrUpdateFile({
       owner,
       repo,
-      path: fileContent,
+      path: "boop.svg",
       message: "Add new file",
       content: fileContent.toString("base64"),
     })
