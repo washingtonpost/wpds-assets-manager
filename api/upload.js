@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const { Octokit } = require("@octokit/rest");
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = "washingtonpost";
