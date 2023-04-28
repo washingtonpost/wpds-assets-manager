@@ -1,45 +1,63 @@
 const fs = require("fs");
 const { Octokit } = require("@octokit/rest");
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const owner = "washingtonpost";
+const repo = "wpds-assets-manager";
 
 const createBranchAndPullRequest = async () => {
-  const octokit = new Octokit({
-    auth: process.env.GITHUB_TOKEN,
-  });
+  // read the file to upload
+  const filePath = "/tmp/boop.svg";
+  const fileName = path.basename(filePath);
+  const fileContent = fs.readFileSync(filePath);
 
-  const { data: branches } = await octokit.rest.repos.listBranches({
-    owner: "washingtonpost",
-    repo: "wpds-assets-manager",
-  });
+  octokit.repos
+    .createOrUpdateFile({
+      owner,
+      repo,
+      path: fileName,
+      message: "Add new file",
+      content: fileContent.toString("base64"),
+    })
+    .then(() => {
+      console.log(`File ${fileName} uploaded successfully`);
 
-  const branchName = `wam-${branches.length + 1}`;
+      // create a new branch
+      const branchName = `new-file-${Date.now()}`;
+      const mainBranch = "main";
+      octokit.git
+        .createRef({
+          owner,
+          repo,
+          ref: `refs/heads/${branchName}`,
+          sha: mainBranch,
+        })
+        .then(() => {
+          console.log(`Branch ${branchName} created successfully`);
 
-  await octokit.rest.git.createRef({
-    owner: "washingtonpost",
-    repo: "wpds-assets-manager",
-    ref: `refs/heads/${branchName}`,
-    sha: "main",
-  });
-
-  // add file from tmp to branch
-  await octokit.rest.repos.createOrUpdateFileContents({
-    owner: "washingtonpost",
-    repo: "wpds-assets-manager",
-    path: "src/boop.svg",
-    message: "Add boop.svg",
-    content: fs.readFileSync("/tmp/boop.svg", "base64"),
-    branch: branchName,
-  });
-
-  await octokit.rest.pulls.create({
-    owner: "washingtonpost",
-    repo: "wpds-assets-manager",
-    title: "New SVG",
-    head: branchName,
-    base: "main",
-    body: "New SVG",
-  });
-
-  return branchName;
+          // create a new pull request
+          octokit.pulls
+            .create({
+              owner,
+              repo,
+              title: `Add ${fileName}`,
+              head: branchName,
+              base: mainBranch,
+              body: "Please review and merge this file",
+            })
+            .then(() => {
+              console.log(`Pull request created successfully`);
+            })
+            .catch((error) => {
+              console.error(`Error creating pull request: ${error}`);
+            });
+        })
+        .catch((error) => {
+          console.error(`Error creating branch: ${error}`);
+        });
+    })
+    .catch((error) => {
+      console.error(`Error uploading file: ${error}`);
+    });
 };
 
 const upload = async (req, res) => {
@@ -47,7 +65,7 @@ const upload = async (req, res) => {
 
   // pipe the request stream to the write stream
   req.pipe(writeStream);
-  
+
   await createBranchAndPullRequest();
 
   // send a success response when the file is uploaded
