@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
 
@@ -20,6 +20,10 @@ const App = () => {
   return (
     <Section>
       <h1>WPDS Assets Manager</h1>
+      <form action="/api/upload" method="post" enctype="multipart/form-data">
+        <input type="file" />
+        <input type="submit" value="Upload" />
+      </form>
       {Object.keys(AllAssets).map((Asset) => {
         const Component = AllAssets[Asset];
         return (
