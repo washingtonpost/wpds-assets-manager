@@ -37,6 +37,7 @@
   },
   "prettier": {},
   "dependencies": {
+    "@octokit/rest": "^19.0.7",
     "react": "^16.0.1 || ^17.0.2",
     "react-dom": "^16.0.1 || ^17.0.2"
   },
