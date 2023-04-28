@@ -14,7 +14,7 @@ const upload = async (req, res) => {
   const fileContent = fs.readFileSync("/tmp/boop.svg");
 
   octokit.repos
-    .createOrUpdateFile({
+    .createOrUpdateFileContents({
       owner,
       repo,
       path: "boop.svg",
