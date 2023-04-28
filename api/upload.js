@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 const { Octokit } = require("@octokit/rest");
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = "washingtonpost";
@@ -18,12 +17,12 @@ const upload = async (req, res) => {
     .createOrUpdateFile({
       owner,
       repo,
-      path: fileName,
+      path: fileContent,
       message: "Add new file",
       content: fileContent.toString("base64"),
     })
     .then(() => {
-      console.log(`File ${fileName} uploaded successfully`);
+      console.log(`File ${fileContent} uploaded successfully`);
 
       // create a new branch
       const branchName = `new-file-${Date.now()}`;
@@ -43,7 +42,7 @@ const upload = async (req, res) => {
             .create({
               owner,
               repo,
-              title: `Add ${fileName}`,
+              title: `Add ${fileContent}`,
               head: branchName,
               base: mainBranch,
               body: "Please review and merge this file",
