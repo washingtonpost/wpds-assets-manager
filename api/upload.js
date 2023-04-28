@@ -5,7 +5,12 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = "washingtonpost";
 const repo = "wpds-assets-manager";
 
-const createBranchAndPullRequest = async () => {
+const upload = async (req, res) => {
+  const writeStream = fs.createWriteStream("/tmp/boop.svg");
+
+  // pipe the request stream to the write stream
+  req.pipe(writeStream);
+
   // read the file to upload
   const fileContent = fs.readFileSync("/tmp/boop.svg");
 
@@ -57,15 +62,6 @@ const createBranchAndPullRequest = async () => {
     .catch((error) => {
       console.error(`Error uploading file: ${error}`);
     });
-};
-
-const upload = async (req, res) => {
-  const writeStream = fs.createWriteStream("/tmp/boop.svg");
-
-  // pipe the request stream to the write stream
-  req.pipe(writeStream);
-
-  await createBranchAndPullRequest();
 
   // send a success response when the file is uploaded
   req.on("end", () => {
