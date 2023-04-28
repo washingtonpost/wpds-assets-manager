@@ -13,58 +13,47 @@ const upload = async (req, res) => {
   // read the file to upload
   const fileContent = fs.readFileSync("/tmp/boop.svg");
 
-  octokit.repos
-    .createOrUpdateFileContents({
-      owner,
-      repo,
-      path: "boop.svg",
-      message: "Add new file",
-      content: fileContent.toString("base64"),
-    })
-    .then(() => {
-      console.log(`File ${fileContent} uploaded successfully`);
+  // create a branch
+  const branchResponse = await octokit.git.createRef({
+    owner,
+    repo,
+    ref: "refs/heads/wpds-bot",
+    sha: "main",
+  });
 
-      // create a new branch
-      const branchName = `new-file-${Date.now()}`;
-      const mainBranch = "main";
-      octokit.git
-        .createRef({
-          owner,
-          repo,
-          ref: `refs/heads/${branchName}`,
-          sha: mainBranch,
-        })
-        .then(() => {
-          console.log(`Branch ${branchName} created successfully`);
+  console.log(branchResponse);
 
-          // create a new pull request
-          octokit.pulls
-            .create({
-              owner,
-              repo,
-              title: `Add ${fileContent}`,
-              head: branchName,
-              base: mainBranch,
-              body: "Please review and merge this file",
-            })
-            .then(() => {
-              console.log(`Pull request created successfully`);
-            })
-            .catch((error) => {
-              console.error(`Error creating pull request: ${error}`);
-            });
-        })
-        .catch((error) => {
-          console.error(`Error creating branch: ${error}`);
-        });
-    })
-    .catch((error) => {
-      console.error(`Error uploading file: ${error}`);
-    });
+  // upload the file to GitHub
+  const uploadResponse = await octokit.repos.createOrUpdateFileContents({
+    owner,
+    repo,
+    path: "boop.svg",
+    message: "Upload a file",
+    content: fileContent.toString("base64"),
+    committer: {
+      name: "WPDS Assets Manager",
+      email: "wpds@washpost.com",
+    },
+    sha: "wpds-bot",
+  });
+
+  console.log(uploadResponse);
+
+  // open a pull request
+  const pullRequestResponse = await octokit.pulls.create({
+    owner,
+    repo,
+    title: "Upload a file",
+    head: "wpds-bot",
+    base: "main",
+    body: "Upload a file",
+  });
+
+  console.log(pullRequestResponse);
 
   // send a success response when the file is uploaded
   req.on("end", () => {
-    console.log(fileContent)
+    console.log(fileContent);
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ message: "File uploaded successfully" }));
   });
