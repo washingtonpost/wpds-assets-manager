@@ -3,7 +3,7 @@ const path = require("path");
 
 const upload = async (req, res) => {
   // get the file name from the headers
-  const fileName = "boop.svg";
+  const fileName = "/tmp/boop.svg";
 
   // create a write stream to the file
   const filePath = path.join(__dirname, fileName);
