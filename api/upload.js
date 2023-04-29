@@ -69,7 +69,6 @@ const upload = async (req, res) => {
       // use the date string prefixed by wam-bot-
       `wam-bot-${Date.now()}`;
 
-   
     const files = parts.map((part) => part.filename);
 
     const tree = await octokit.git.createTree({
@@ -123,14 +122,14 @@ const upload = async (req, res) => {
     await octokit.pulls.create({
       owner,
       repo,
-      title: `feat: new assets - ${files.map((file) =>
-        file.replaceAll(".svg", "")
-      ).join(", ")}`,
+      title: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", ""))
+        .join(", ")}`,
       head: branchName,
       base: "main",
-      body: `feat: new assets - ${files.map((file) =>
-        file.replaceAll(".svg", "")
-      ).join(", ")}`,
+      body: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", ""))
+        .join(", ")}`,
     });
 
     res.writeHead(200, { "Content-Type": "text/plain" });
