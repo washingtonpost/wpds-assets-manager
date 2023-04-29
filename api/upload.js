@@ -4,58 +4,129 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = "washingtonpost";
 const repo = "wpds-assets-manager";
 
+const isDev = process.env.VERCEL && process.env.VERCEL_ENV === "development";
+
+function extractBoundary(contentType) {
+  const match = /boundary=(.+)$/.exec(contentType);
+  if (match) {
+    return match[1];
+  } else {
+    throw new Error("Invalid content-type header");
+  }
+}
+
+function parseMultipartFormdata(buffer, boundary) {
+  const parts = [];
+
+  const lines = buffer.toString().split("\r\n");
+  let part = null;
+
+  for (const line of lines) {
+    if (line.startsWith(`--${boundary}`)) {
+      if (part) {
+        parts.push(part);
+      }
+      part = { headers: {} };
+    } else if (line.startsWith("Content-Disposition")) {
+      const match = /name="([^"]+)"(?:; filename="([^"]+)")?/.exec(line);
+      part.name = match[1];
+      part.filename = match[2];
+    } else if (line.startsWith("Content-Type")) {
+      part.contentType = line.split(": ")[1];
+    } else if (line === "") {
+      part.data = Buffer.alloc(0);
+    } else if (part) {
+      part.data = Buffer.concat([part.data, Buffer.from(line, "utf8")]);
+    }
+  }
+
+  return parts;
+}
+
 const upload = async (req, res) => {
-  const writeStream = fs.createWriteStream("/tmp/boop.svg");
+  const chunks = [];
 
-  // pipe the request stream to the write stream
-  req.pipe(writeStream);
-
-  // read the file to upload
-  const fileContent = fs.readFileSync("/tmp/boop.svg");
-
-  // create a branch
-  const branchResponse = await octokit.git.createRef({
-    owner,
-    repo,
-    ref: "refs/heads/wpds-bot",
-    sha: "main",
+  req.on("data", (chunk) => {
+    chunks.push(chunk);
   });
 
-  console.log(branchResponse);
+  req.on("end", async () => {
+    const boundary = extractBoundary(req.headers["content-type"]);
+    const buffer = Buffer.concat(chunks);
+    const parts = parseMultipartFormdata(buffer, boundary);
 
-  // upload the file to GitHub
-  const uploadResponse = await octokit.repos.createOrUpdateFileContents({
-    owner,
-    repo,
-    path: "boop.svg",
-    message: "Upload a file",
-    content: fileContent.toString("base64"),
-    committer: {
-      name: "WPDS Assets Manager",
-      email: "wpds@washpost.com",
-    },
-    sha: "wpds-bot",
-  });
+    for (const part of parts) {
+      if (part.filename) {
+        const filePath = part.filename;
+        fs.writeFileSync(`${isDev ? "" : "tmp"}${filePath}`, part.data);
+        console.log(part.data);
+        console.log(`Saved file to ${filePath}`);
+      }
+    }
 
-  console.log(uploadResponse);
+    // create a new commit in a new branch with the files
+    const branchName =
+      // use the date string prefixed by wam-bot-
+      `wam-bot-${Date.now()}`;
 
-  // open a pull request
-  const pullRequestResponse = await octokit.pulls.create({
-    owner,
-    repo,
-    title: "Upload a file",
-    head: "wpds-bot",
-    base: "main",
-    body: "Upload a file",
-  });
+   
+    const files = parts.map((part) => part.filename);
 
-  console.log(pullRequestResponse);
+    const tree = await octokit.git.createTree({
+      owner,
+      repo,
+      base_tree: "main",
+      tree: files.map((path) => ({
+        path,
+        mode: "100644",
+        type: "blob",
+        content: fs.readFileSync(path, "base64"),
+      })),
+    });
 
-  // send a success response when the file is uploaded
-  req.on("end", () => {
-    console.log(fileContent);
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ message: "File uploaded successfully" }));
+    // get the sha of the last commit of the default branch
+    const mainRef = await octokit.git.getRef({
+      owner,
+      repo,
+      ref: "heads/main",
+    });
+
+    const newRef = await octokit.git.createRef({
+      owner,
+      repo,
+      ref: `refs/heads/${branchName}`,
+      sha: mainRef.data.object.sha,
+    });
+
+    // loop over all files and create a commit for each
+    for (const file of files) {
+      await octokit.repos.createOrUpdateFileContents({
+        owner,
+        repo,
+        path: `src/${file}`,
+        message: `feat: new asset - ${file.replaceAll(".svg", "")}`,
+        content: fs.readFileSync(file, "base64"),
+        sha: tree.data.sha,
+        branch: branchName,
+      });
+    }
+
+    // create a pull request
+    await octokit.pulls.create({
+      owner,
+      repo,
+      title: `feat: new assets - ${files.map((file) =>
+        file.replaceAll(".svg", "")
+      ).join(", ")}`,
+      head: branchName,
+      base: "main",
+      body: `feat: new assets - ${files.map((file) =>
+        file.replaceAll(".svg", "")
+      ).join(", ")}`,
+    });
+
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("File uploaded successfully");
   });
 };
 
