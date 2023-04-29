@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
 
