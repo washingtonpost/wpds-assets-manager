@@ -108,6 +108,14 @@ const upload = async (req, res) => {
         content: fs.readFileSync(file, "base64"),
         sha: tree.data.sha,
         branch: branchName,
+        committer: {
+          name: "WPDS Assets Manager 👩‍🌾",
+          email: "wpds@washingtonpost.com",
+        },
+        author: {
+          name: "WPDS Assets Manager 👩‍🌾",
+          email: "wpds@washingtonpost.com",
+        },
       });
     }
 
