@@ -1,6 +1,7 @@
 const fs = require("fs");
 const { Octokit } = require("@octokit/rest");
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const { optimize } = require("svgo");
 const owner = "washingtonpost";
 const repo = "wpds-assets-manager";
 
@@ -44,6 +45,10 @@ function parseMultipartFormdata(buffer, boundary) {
 }
 
 const upload = async (req, res) => {
+  // use a PAT to authenticate with GitHub using a request.header
+  // const token = req.headers.authorization.replace("Bearer ", "");
+  // const octokit = new Octokit({ auth: token });
+
   const chunks = [];
 
   req.on("data", (chunk) => {
@@ -69,7 +74,32 @@ const upload = async (req, res) => {
       // use the date string prefixed by wam-bot-
       `wam-bot-${Date.now()}`;
 
-    const files = parts.map((part) => part.filename);
+    const files = parts.map((part) => {
+      // parse file is file has width and height (16px) in the svg attributes 
+      if (part.filename && part.data.toString().includes('width="16" height="16"')) {
+        // use svgo to optimize the svg
+        const optimized = optimize(part.data.toString(), {
+          multipass: true,
+          plugins: [
+            {
+              name: "removeViewBox",
+              active: false,
+            },
+            {
+              name: "removeDimensions",
+              active: true,
+            },
+          ],
+        });
+        // write the optimized svg to a file
+        fs.writeFileSync(
+          `${isDev ? "" : "tmp"}${part.filename}`,
+          optimized.data
+        );
+
+        return part.filename;
+      }
+    });
 
     const tree = await octokit.git.createTree({
       owner,
