@@ -81,7 +81,7 @@ const upload = async (req, res) => {
     const files = parts.map((part) => {
       console.log(part.filename);
       // add tmp to the path if we're not in dev
-      return `${isDev ? "" : "/tmp/"}${part.filename}`;
+      return `${isDev ? "" : "tmp/"}${part.filename}`;
     });
 
     const tree = await octokit.git.createTree({
