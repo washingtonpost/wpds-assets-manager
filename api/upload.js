@@ -84,17 +84,17 @@ const upload = async (req, res) => {
       return `${isDev ? "" : "/tmp/"}${part.filename}`;
     });
 
-    // const tree = await octokit.git.createTree({
-    //   owner,
-    //   repo,
-    //   base_tree: "main",
-    //   tree: files.map((path) => ({
-    //     path,
-    //     mode: "100644",
-    //     type: "blob",
-    //     content: fs.readFileSync(path, "base64"),
-    //   })),
-    // });
+    const tree = await octokit.git.createTree({
+      owner,
+      repo,
+      base_tree: "main",
+      tree: files.map((path) => ({
+        path,
+        mode: "100644",
+        type: "blob",
+        content: fs.readFileSync(path, "base64"),
+      })),
+    });
 
     // get the sha of the last commit of the default branch
     const mainRef = await octokit.git.getRef({
@@ -112,13 +112,14 @@ const upload = async (req, res) => {
 
     // loop over all files and create a commit for each
     for (const file of files) {
+      console.log("🛋️", file);
       await octokit.repos.createOrUpdateFileContents({
         owner,
         repo,
         path: `src/${file}`,
         message: `feat: new asset - ${file.replaceAll(".svg", "")}`,
         content: fs.readFileSync(file, "base64"),
-        sha: newRef.data.sha,
+        sha: tree.data.sha,
         branch: branchName,
         committer: {
           name: "WPDS Assets Manager 👩‍🌾",
