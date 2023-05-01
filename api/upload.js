@@ -63,7 +63,7 @@ const upload = async (req, res) => {
     for (const part of parts) {
       if (part.filename) {
         const filePath = part.filename;
-        fs.writeFileSync(`${isDev ? "" : "tmp/"}${filePath}`, part.data);
+        fs.writeFileSync(`${isDev ? "" : "tmp"}${filePath}`, part.data);
         console.log(part.data);
         console.log(`Saved file to ${filePath}`);
       }
@@ -75,33 +75,6 @@ const upload = async (req, res) => {
       `wam-bot-${Date.now()}`;
 
     const files = parts.map((part) => part.filename);
-
-    // const files = parts.map((part) => {
-    //   // parse file is file has width and height (16px) in the svg attributes
-    //   if (part.filename && part.data.toString().includes('width="16" height="16"')) {
-    //     // use svgo to optimize the svg
-    //     const optimized = optimize(part.data.toString(), {
-    //       multipass: true,
-    //       plugins: [
-    //         {
-    //           name: "removeViewBox",
-    //           active: false,
-    //         },
-    //         {
-    //           name: "removeDimensions",
-    //           active: true,
-    //         },
-    //       ],
-    //     });
-    //     // write the optimized svg to a file
-    //     fs.writeFileSync(
-    //       `${isDev ? "" : "tmp/"}${part.filename}`,
-    //       optimized.data
-    //     );
-
-    //     return part.filename;
-    //   }
-    // });
 
     const tree = await octokit.git.createTree({
       owner,
