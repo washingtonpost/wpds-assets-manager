@@ -63,7 +63,7 @@ const upload = async (req, res) => {
     for (const part of parts) {
       if (part.filename) {
         const filePath = part.filename;
-        fs.writeFileSync(`${isDev ? "" : "tmp"}${filePath}`, part.data);
+        fs.writeFileSync(`${isDev ? "" : "tmp/"}${filePath}`, part.data);
         console.log(part.data);
         console.log(`Saved file to ${filePath}`);
       }
@@ -93,7 +93,7 @@ const upload = async (req, res) => {
         });
         // write the optimized svg to a file
         fs.writeFileSync(
-          `${isDev ? "" : "tmp"}${part.filename}`,
+          `${isDev ? "" : "tmp/"}${part.filename}`,
           optimized.data
         );
 
