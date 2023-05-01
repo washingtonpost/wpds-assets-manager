@@ -63,7 +63,11 @@ const upload = async (req, res) => {
     for (const part of parts) {
       if (part.filename) {
         const filePath = part.filename;
-        fs.writeFileSync(`${isDev ? "" : "tmp/"}${filePath}`, part.data);
+        fs.writeFileSync(
+          `${isDev ? "" : "/tmp/"}${filePath}`,
+          part.data,
+          "utf8"
+        );
         console.log(part.data);
         console.log(`Saved file to ${filePath}`);
       }
