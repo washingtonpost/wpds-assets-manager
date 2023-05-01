@@ -78,7 +78,11 @@ const upload = async (req, res) => {
       // use the date string prefixed by wam-bot-
       `wam-bot-${Date.now()}`;
 
-    const files = parts.map((part) => part.filename);
+    const files = parts.map((part) => {
+      console.log(part.filename);
+      // add tmp to the path if we're not in dev
+      return `${isDev ? "" : "/tmp/"}${part.filename}`;
+    });
 
     const tree = await octokit.git.createTree({
       owner,
