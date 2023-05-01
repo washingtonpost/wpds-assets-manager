@@ -81,19 +81,13 @@ const upload = async (req, res) => {
     const files = parts.map((part) => {
       console.log(part.filename);
       // add tmp to the path if we're not in dev
-      return `${isDev ? "" : "tmp/"}${part.filename}`;
+      return `${isDev ? "" : "/tmp/"}${part.filename}`;
     });
 
     const tree = await octokit.git.createTree({
       owner,
       repo,
       base_tree: "main",
-      tree: files.map((path) => ({
-        path,
-        mode: "100644",
-        type: "blob",
-        content: fs.readFileSync(path, "base64"),
-      })),
     });
 
     // get the sha of the last commit of the default branch
