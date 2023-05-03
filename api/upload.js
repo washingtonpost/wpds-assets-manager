@@ -171,21 +171,23 @@ const upload = async (req, res) => {
         .join(", ")}`,
       head: branchName,
       base: "main",
-      body: `feat: new assets - ${files
+      body: `# feat: new assets - ${files
         .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
         .join(", ")}
 
-        This pull request was created by the WPDS Assets Manager 👩‍🌾
+        ### This pull request was created by the WPDS Assets Manager 👩‍🌾
 
         ${
           // embed the SVGs as images in the PR
-          files.map(
-            (file) =>
-              `<img src="https://raw.githubusercontent.com/washingtonpost/wpds-assets-manager/${branchName}/src/${file.replaceAll(
-                "/tmp/",
-                ""
-              )}" width="100" />`
-          )
+          files
+            .map(
+              (file) =>
+                `<img src="https://raw.githubusercontent.com/washingtonpost/wpds-assets-manager/${branchName}/src/${file.replaceAll(
+                  "/tmp/",
+                  ""
+                )}" width="100" />`
+            )
+            .join("")
         }
         `,
     });
