@@ -91,12 +91,7 @@ const upload = async (req, res) => {
     }
 
     // create a new commit in a new branch with the files
-    const branchName = // create a branch name based on the current week number
-      `assets-week-${new Date().toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      })}`.replaceAll("/", "-");
+    const branchName = "feat/new-assets"
 
     const files = parts.map((part) => {
       console.log(part.filename);
