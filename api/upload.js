@@ -61,8 +61,8 @@ const upload = async (req, res) => {
     const parts = parseMultipartFormdata(buffer, boundary);
 
     for (const part of parts) {
-      if (part.filename) {
-        const filePath = part.filename;
+      if (part.name) {
+        const filePath = part.name;
         // process the file with SVGO
         const result = await optimize(part.data, {
           path: filePath,
@@ -91,28 +91,13 @@ const upload = async (req, res) => {
     }
 
     // create a new commit in a new branch with the files
-    const branchName = "feat/new-assets"
-
-    const files = parts.map((part) => {
-      console.log(part.filename);
-      // add tmp to the path if we're not in dev
-      return `${isDev ? "" : "/tmp/"}${part.filename}`;
-    });
-
-    const tree = await octokit.git.createTree({
-      owner,
-      repo,
-      base_tree: "main",
-      tree: files.map((path) => {
-        return {
-          // remove first slash
-          path: path.replace("/", ""),
-          mode: "100644",
-          type: "blob",
-          content: fs.readFileSync(path, "base64"),
-        };
-      }),
-    });
+    const branchName = `feat/new-assets-${
+      // use files names to create a unique branch name
+      parts
+        .map((part) => part.name)
+        .join("-")
+        .replaceAll(".svg", "")
+    }`;
 
     // get the sha of the last commit of the default branch
     const mainRef = await octokit.git.getRef({
@@ -121,35 +106,45 @@ const upload = async (req, res) => {
       ref: "heads/main",
     });
 
-    const newRef = await octokit.git.createRef({
+    const tree = await octokit.git.createTree({
+      owner,
+      repo,
+      base_tree: mainRef.data.object.sha,
+      tree: parts.map((part) => {
+        const tempPath = `${isDev ? "" : "/tmp/"}${part.name}`;
+
+        return {
+          path: `src/${part.name}`,
+          mode: "100644",
+          content: fs.readFileSync(tempPath, "utf8"),
+        };
+      }),
+    });
+
+    const files = parts.map((part) => part.name);
+
+    // create a commit with the new tree
+    const commit = await octokit.git.createCommit({
+      owner,
+      repo,
+      message: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+        .join(", ")}`,
+      tree: tree.data.sha,
+      parents: [mainRef.data.object.sha],
+      author: {
+        name: "WPDS Assets Manager 👩‍🌾",
+        email: "wpds@washingtonpost.com",
+      },
+    });
+
+    // update a reference
+    const updatedRef = await octokit.git.createRef({
       owner,
       repo,
       ref: `refs/heads/${branchName}`,
-      sha: mainRef.data.object.sha,
+      sha: commit.data.sha,
     });
-
-    // loop over all files and create a commit for each
-    for (const file of files) {
-      console.log("🛋️", file);
-      const cleanedPath = file.replace("/tmp/", "");
-      await octokit.repos.createOrUpdateFileContents({
-        owner,
-        repo,
-        path: `src/${cleanedPath}`,
-        message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
-        content: fs.readFileSync(file, "base64"),
-        sha: tree.data.sha,
-        branch: branchName,
-        committer: {
-          name: "WPDS Assets Manager 👩‍🌾",
-          email: "wpds@washingtonpost.com",
-        },
-        author: {
-          name: "WPDS Assets Manager 👩‍🌾",
-          email: "wpds@washingtonpost.com",
-        },
-      });
-    }
 
     await octokit.pulls.create({
       owner,
