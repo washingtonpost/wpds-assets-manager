@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.19.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.18.0...v1.19.0) (2023-05-03)
+
+
+### Features
+
+* add helpdesk logos ([#76](https://github.com/washingtonpost/wpds-assets-manager/issues/76)) ([bbf318e](https://github.com/washingtonpost/wpds-assets-manager/commit/bbf318edfd6910454a7e36d23ffaf92c55e5bcc0))
+* add upload service for automation ([#71](https://github.com/washingtonpost/wpds-assets-manager/issues/71)) ([d5fdcc6](https://github.com/washingtonpost/wpds-assets-manager/commit/d5fdcc68624e9a34be2643d1c01a5079a2e41f0d))
+* new assets - copy, course, for-you, newspaper ([#102](https://github.com/washingtonpost/wpds-assets-manager/issues/102)) ([8cbe9d2](https://github.com/washingtonpost/wpds-assets-manager/commit/8cbe9d2964e139129b0579f01684f01b2cdac103))
+
+
+### Bug Fixes
+
+* add multiple files upload ([#98](https://github.com/washingtonpost/wpds-assets-manager/issues/98)) ([db4505e](https://github.com/washingtonpost/wpds-assets-manager/commit/db4505e5961f978f42e1c8473e1fd6218e86ea2a))
+
 ## [1.18.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.17.0...v1.18.0) (2023-03-23)
 
 ### Features
