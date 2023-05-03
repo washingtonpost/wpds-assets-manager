@@ -154,15 +154,15 @@ const upload = async (req, res) => {
     }
 
     // create a pull request
-    await octokit.pulls.create({
-      owner,
-      repo,
-      title: `feat: new assets - ${files
-        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
-        .join(", ")}`,
-      head: branchName,
-      base: "main",
-    });
+    // await octokit.pulls.create({
+    //   owner,
+    //   repo,
+    //   title: `feat: new assets - ${files
+    //     .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+    //     .join(", ")}`,
+    //   head: branchName,
+    //   base: "main",
+    // });
 
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.end("File uploaded successfully");
