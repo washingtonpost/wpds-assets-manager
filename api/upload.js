@@ -60,7 +60,8 @@ const upload = async (req, res) => {
     const buffer = Buffer.concat(chunks);
     const parts = parseMultipartFormdata(buffer, boundary);
 
-    for (const part of parts) {
+    parts.map(async (part) => {
+      console.log(part.filename);
       if (part.filename) {
         const filePath = part.filename;
         // process the file with SVGO
@@ -88,7 +89,7 @@ const upload = async (req, res) => {
           "utf8"
         );
       }
-    }
+    });
 
     // create a new commit in a new branch with the files
     const branchName = "feat/new-assets";
@@ -99,20 +100,20 @@ const upload = async (req, res) => {
       return `${isDev ? "" : "/tmp/"}${part.filename}`;
     });
 
-    const tree = await octokit.git.createTree({
-      owner,
-      repo,
-      base_tree: "main",
-      tree: files.map((path) => {
-        return {
-          // remove first slash
-          path: path.replace("/", ""),
-          mode: "100644",
-          type: "blob",
-          content: fs.readFileSync(path, "base64"),
-        };
-      }),
-    });
+    // const tree = await octokit.git.createTree({
+    //   owner,
+    //   repo,
+    //   base_tree: "main",
+    //   tree: files.map((path) => {
+    //     return {
+    //       // remove first slash
+    //       path: path.replace("/", ""),
+    //       mode: "100644",
+    //       type: "blob",
+    //       content: fs.readFileSync(path, "base64"),
+    //     };
+    //   }),
+    // });
 
     // get the sha of the last commit of the default branch
     const mainRef = await octokit.git.getRef({
@@ -149,15 +150,15 @@ const upload = async (req, res) => {
       });
     });
 
-    await octokit.pulls.create({
-      owner,
-      repo,
-      title: `feat: new assets - ${files
-        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
-        .join(", ")}`,
-      head: branchName,
-      base: "main",
-    });
+    // await octokit.pulls.create({
+    //   owner,
+    //   repo,
+    //   title: `feat: new assets - ${files
+    //     .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+    //     .join(", ")}`,
+    //   head: branchName,
+    //   base: "main",
+    // });
 
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.end("File uploaded successfully");
