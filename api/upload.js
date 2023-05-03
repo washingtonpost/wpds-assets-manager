@@ -88,12 +88,16 @@ const upload = async (req, res) => {
       owner,
       repo,
       base_tree: "main",
-      tree: files.map((path) => ({
-        path,
-        mode: "100644",
-        type: "blob",
-        content: fs.readFileSync(path, "base64"),
-      })),
+      tree: files.map((path) => {
+        console.log(path);
+        return {
+          // remove first slash
+          path: path.replace("/", ""),
+          mode: "100644",
+          type: "blob",
+          content: fs.readFileSync(path, "base64"),
+        };
+      }),
     });
 
     // get the sha of the last commit of the default branch
