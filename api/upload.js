@@ -91,7 +91,7 @@ const upload = async (req, res) => {
     }
 
     // create a new commit in a new branch with the files
-    const branchName = "feat/new-assets"
+    const branchName = "feat/new-assets";
 
     const files = parts.map((part) => {
       console.log(part.filename);
@@ -130,11 +130,10 @@ const upload = async (req, res) => {
 
     let lastSha = newRef.data.object.sha;
 
-    // loop over all files and create a commit for each
-    for (const file of files) {
-      console.log("🛋️", file);
+    // map over files and createOrUpdateFileContents
+    const newFiles = files.map(async (file) => {
       const cleanedPath = file.replace("/tmp/", "");
-      await octokit.repos.createOrUpdateFileContents({
+      const contents = await octokit.repos.createOrUpdateFileContents({
         owner,
         repo,
         path: `src/${cleanedPath}`,
@@ -152,15 +151,8 @@ const upload = async (req, res) => {
         },
       });
 
-      // get the sha of the last commit
-      const ref = await octokit.git.getRef({
-        owner,
-        repo,
-        ref: `heads/${branchName}`,
-      });
-
-      lastSha = ref.data.object.sha;
-    }
+      lastSha = contents.data.commit.sha;
+    });
 
     await octokit.pulls.create({
       owner,
