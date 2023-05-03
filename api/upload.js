@@ -148,12 +148,12 @@ const upload = async (req, res) => {
     });
 
     // update a reference
-    const ref = await octokit.git.updateRef({
-      owner,
-      repo,
-      ref: `heads/${branchName}`,
-      sha: commit.data.sha,
-    });
+    // const ref = await octokit.git.updateRef({
+    //   owner,
+    //   repo,
+    //   ref: `heads/${branchName}`,
+    //   sha: commit.data.sha,
+    // });
 
     // get the sha of the last commit of the default branch
     // const mainRef = await octokit.git.getRef({
