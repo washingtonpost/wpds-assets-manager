@@ -119,3 +119,5 @@ public
 build
 .yalc
 yalc.lock
+.vercel
+boop.svg

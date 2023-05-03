@@ -4,7 +4,7 @@
 
 ## Using our WAM Bot to upload assets
 
-1. Download [Hoppscotch](https://hoppscotch.io/).
+1. Download [Hoppscotch](https://hoppscotch.io/). Make sure to install their [Chrome extension](https://chrome.google.com/webstore/detail/hoppscotch-browser-extens/amknoiejhlmhancpahfcfcfhllgkpbld). 
 2. Open Hoppscotch and create a new request.
 3. Set the request method to `POST`.
 4. Set the request URL to `https://wpds-assets-manager.preview.now.washingtonpost.com/api/upload`.
