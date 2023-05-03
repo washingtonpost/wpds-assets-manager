@@ -142,12 +142,12 @@ const upload = async (req, res) => {
       owner,
       repo,
       title: `feat: new assets - ${files
-        .map((file) => file.replaceAll(".svg", ""))
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
         .join(", ")}`,
       head: branchName,
       base: "main",
       body: `feat: new assets - ${files
-        .map((file) => file.replaceAll(".svg", ""))
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
         .join(", ")}`,
     });
 
