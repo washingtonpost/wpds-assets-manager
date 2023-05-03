@@ -143,7 +143,7 @@ const upload = async (req, res) => {
     const commit = await octokit.git.createCommit({
       owner,
       repo,
-      message: `feat: new assets - ${parts.map((part) => part.filename)}`,
+      message: `feat: new assets - ${parts.map((part) => part.filename.replace(".svg", "")).join(", ")}`,
       tree: tree.data.sha,
       parents: ["main"],
     });
