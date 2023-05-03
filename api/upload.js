@@ -61,8 +61,8 @@ const upload = async (req, res) => {
     const parts = parseMultipartFormdata(buffer, boundary);
 
     for (const part of parts) {
-      if (part.filename) {
-        const filePath = part.filename;
+      if (part.name) {
+        const filePath = part.name;
         // process the file with SVGO
         const result = await optimize(part.data, {
           path: filePath,
@@ -81,8 +81,6 @@ const upload = async (req, res) => {
           ],
         });
 
-        console.log(result.data);
-
         // write the optimized file to the same path
         fs.writeFileSync(
           `${isDev ? "" : "/tmp/"}${filePath}`,
@@ -93,13 +91,13 @@ const upload = async (req, res) => {
     }
 
     // create a new commit in a new branch with the files
-    const branchName = "feat/new-assets";
-
-    // const files = parts.map((part) => {
-    //   console.log(part.filename);
-    //   // add tmp to the path if we're not in dev
-    //   return `${isDev ? "" : "/tmp/"}${part.filename}`;
-    // });
+    const branchName = `feat/new-assets-${
+      // use files names to create a unique branch name
+      parts
+        .map((part) => part.name)
+        .join("-")
+        .replaceAll(".svg", "")
+    }`;
 
     // get the sha of the last commit of the default branch
     const mainRef = await octokit.git.getRef({
@@ -108,41 +106,32 @@ const upload = async (req, res) => {
       ref: "heads/main",
     });
 
-    // create a reference for a branch
-    const newBranchRef = await octokit.git.createRef({
-      owner,
-      repo,
-      ref: `refs/heads/${branchName}`,
-      sha: mainRef.data.object.sha,
-    });
-
     const tree = await octokit.git.createTree({
       owner,
       repo,
-      base_tree: "main",
+      base_tree: mainRef.data.object.sha,
       tree: parts.map((part) => {
-        const tempPath = `${isDev ? "" : "/tmp/"}${part.filename}`;
-        // // write file to tmp
-        // fs.writeFileSync(tempPath, part.data, "utf8");
-
-        // console.log(part.data);
+        const tempPath = `${isDev ? "" : "/tmp/"}${part.name}`;
 
         return {
-          path: `src/${part.filename}`,
+          path: `src/${part.name}`,
           mode: "100644",
-          type: "blob",
-          content: fs.readFileSync(tempPath, "base64"),
+          content: fs.readFileSync(tempPath, "utf8"),
         };
       }),
     });
+
+    const files = parts.map((part) => part.name);
 
     // create a commit with the new tree
     const commit = await octokit.git.createCommit({
       owner,
       repo,
-      message: "feat: new assets",
+      message: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+        .join(", ")}`,
       tree: tree.data.sha,
-      parents: [newBranchRef.data.object.sha],
+      parents: [mainRef.data.object.sha],
       author: {
         name: "WPDS Assets Manager 👩‍🌾",
         email: "wpds@washingtonpost.com",
@@ -150,50 +139,22 @@ const upload = async (req, res) => {
     });
 
     // update a reference
-    // const ref = await octokit.git.updateRef({
-    //   owner,
-    //   repo,
-    //   ref: `heads/${branchName}`,
-    //   sha: commit.data.sha,
-    // });
+    const updatedRef = await octokit.git.createRef({
+      owner,
+      repo,
+      ref: `refs/heads/${branchName}`,
+      sha: commit.data.sha,
+    });
 
-    // get the sha of the last commit of the default branch
-    // const mainRef = await octokit.git.getRef({
-    //   owner,
-    //   repo,
-    //   ref: "heads/main",
-    // });
-
-    // map over files and createOrUpdateFileContents
-    // const newFiles = files.map(async (file) => {
-    //   const cleanedPath = file.replace("/tmp/", "");
-    //   const contents = await octokit.repos.createOrUpdateFileContents({
-    //     owner,
-    //     repo,
-    //     path: `src/${cleanedPath}`,
-    //     message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
-    //     content: fs.readFileSync(file, "base64"),
-    //     branch: branchName,
-    //     committer: {
-    //       name: "WPDS Assets Manager 👩‍🌾",
-    //       email: "wpds@washingtonpost.com",
-    //     },
-    //     author: {
-    //       name: "WPDS Assets Manager 👩‍🌾",
-    //       email: "wpds@washingtonpost.com",
-    //     },
-    //   });
-    // });
-
-    // await octokit.pulls.create({
-    //   owner,
-    //   repo,
-    //   title: `feat: new assets - ${files
-    //     .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
-    //     .join(", ")}`,
-    //   head: branchName,
-    //   base: "main",
-    // });
+    await octokit.pulls.create({
+      owner,
+      repo,
+      title: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+        .join(", ")}`,
+      head: branchName,
+      base: "main",
+    });
 
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.end("File uploaded successfully");
