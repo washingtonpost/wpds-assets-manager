@@ -92,8 +92,10 @@ const upload = async (req, res) => {
 
     // create a new commit in a new branch with the files
     const branchName =
-      // use the date string prefixed by wam-bot-
-      `wam-bot-${Date.now()}`;
+      // use the files to create a unique branch name
+      `feat/new-assets-${parts
+        .map((part) => part.filename.replaceAll(".svg", ""))
+        .join("-")}`.replaceAll(" ", "-");
 
     const files = parts.map((part) => {
       console.log(part.filename);
@@ -153,16 +155,15 @@ const upload = async (req, res) => {
       });
     }
 
-    // create a pull request
-    // await octokit.pulls.create({
-    //   owner,
-    //   repo,
-    //   title: `feat: new assets - ${files
-    //     .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
-    //     .join(", ")}`,
-    //   head: branchName,
-    //   base: "main",
-    // });
+    await octokit.pulls.create({
+      owner,
+      repo,
+      title: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+        .join(", ")}`,
+      head: branchName,
+      base: "main",
+    });
 
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.end("File uploaded successfully");
