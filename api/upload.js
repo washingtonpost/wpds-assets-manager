@@ -81,6 +81,8 @@ const upload = async (req, res) => {
           ],
         });
 
+        console.log(result.data);
+
         // write the optimized file to the same path
         fs.writeFileSync(
           `${isDev ? "" : "/tmp/"}${filePath}`,
