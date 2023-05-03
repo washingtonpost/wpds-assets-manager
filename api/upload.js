@@ -108,7 +108,7 @@ const upload = async (req, res) => {
     });
 
     // create a reference for a branch
-    await octokit.git.createRef({
+    const newBranchRef = await octokit.git.createRef({
       owner,
       repo,
       ref: `refs/heads/${branchName}`,
@@ -143,15 +143,9 @@ const upload = async (req, res) => {
     const commit = await octokit.git.createCommit({
       owner,
       repo,
-      message: `feat: new assets - ${parts
-        .map((part) => part.filename.replace(".svg", ""))
-        .join(", ")}`,
+      message: "feat: new assets",
       tree: tree.data.sha,
-      parents: ["main", branchName],
-      committer: {
-        name: "WPDS Assets Manager 👩‍🌾",
-        email: "wpds@washingtonpost.com",
-      },
+      parents: [newBranchRef.data.object.sha],
       author: {
         name: "WPDS Assets Manager 👩‍🌾",
         email: "wpds@washingtonpost.com",
