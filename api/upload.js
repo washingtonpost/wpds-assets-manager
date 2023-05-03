@@ -128,8 +128,6 @@ const upload = async (req, res) => {
       sha: mainRef.data.object.sha,
     });
 
-    let lastSha = newRef.data.object.sha;
-
     // map over files and createOrUpdateFileContents
     const newFiles = files.map(async (file) => {
       const cleanedPath = file.replace("/tmp/", "");
@@ -139,7 +137,6 @@ const upload = async (req, res) => {
         path: `src/${cleanedPath}`,
         message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
         content: fs.readFileSync(file, "base64"),
-        sha: lastSha,
         branch: branchName,
         committer: {
           name: "WPDS Assets Manager 👩‍🌾",
@@ -150,8 +147,6 @@ const upload = async (req, res) => {
           email: "wpds@washingtonpost.com",
         },
       });
-
-      lastSha = contents.data.commit.sha;
     });
 
     await octokit.pulls.create({
