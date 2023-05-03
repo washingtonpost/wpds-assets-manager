@@ -120,7 +120,7 @@ const upload = async (req, res) => {
       repo,
       base_tree: "main",
       tree: files.map((path) => {
-        const cleanedPath = file.replace("/tmp/", "");
+        const cleanedPath = path.replace("/tmp/", "");
         return {
           path: `src/${cleanedPath}`,
           mode: "100644",
