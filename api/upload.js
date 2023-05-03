@@ -128,6 +128,8 @@ const upload = async (req, res) => {
       sha: mainRef.data.object.sha,
     });
 
+    let lastSha = newRef.data.object.sha;
+
     // loop over all files and create a commit for each
     for (const file of files) {
       console.log("🛋️", file);
@@ -138,7 +140,7 @@ const upload = async (req, res) => {
         path: `src/${cleanedPath}`,
         message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
         content: fs.readFileSync(file, "base64"),
-        sha: tree.data.sha,
+        sha: lastSha,
         branch: branchName,
         committer: {
           name: "WPDS Assets Manager 👩‍🌾",
@@ -149,6 +151,15 @@ const upload = async (req, res) => {
           email: "wpds@washingtonpost.com",
         },
       });
+
+      // get the sha of the last commit
+      const ref = await octokit.git.getRef({
+        owner,
+        repo,
+        ref: `heads/${branchName}`,
+      });
+
+      lastSha = ref.data.object.sha;
     }
 
     await octokit.pulls.create({
