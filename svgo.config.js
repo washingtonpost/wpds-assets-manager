@@ -4,7 +4,6 @@ module.exports = {
     "inlineStyles",
     "prefixIds",
     "removeDimensions",
-
     {
       name: "removeUselessStrokeAndFill",
       params: {

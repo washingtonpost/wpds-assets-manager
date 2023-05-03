@@ -70,6 +70,31 @@ const upload = async (req, res) => {
         );
         console.log(part.data);
         console.log(`Saved file to ${filePath}`);
+
+        // process the file with SVGO
+        const result = await optimize(part.data, {
+          path: filePath,
+          multipass: true,
+          plugins: [
+            "convertStyleToAttrs",
+            "inlineStyles",
+            "prefixIds",
+            "removeDimensions",
+            {
+              name: "removeUselessStrokeAndFill",
+              params: {
+                removeNone: true,
+              },
+            },
+          ],
+        });
+
+        // write the optimized file to the same path
+        fs.writeFileSync(
+          `${isDev ? "" : "/tmp/"}${filePath}`,
+          result.data,
+          "utf8"
+        );
       }
     }
 
