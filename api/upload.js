@@ -60,36 +60,35 @@ const upload = async (req, res) => {
     const buffer = Buffer.concat(chunks);
     const parts = parseMultipartFormdata(buffer, boundary);
 
-    // parts.map(async (part) => {
-    //   console.log(part.filename);
-    //   if (part.filename) {
-    //     const filePath = part.filename;
-    //     // process the file with SVGO
-    //     const result = await optimize(part.data, {
-    //       path: filePath,
-    //       multipass: true,
-    //       plugins: [
-    //         "convertStyleToAttrs",
-    //         "inlineStyles",
-    //         "prefixIds",
-    //         "removeDimensions",
-    //         {
-    //           name: "removeUselessStrokeAndFill",
-    //           params: {
-    //             removeNone: true,
-    //           },
-    //         },
-    //       ],
-    //     });
+    for (const part of parts) {
+      if (part.filename) {
+        const filePath = part.filename;
+        // process the file with SVGO
+        const result = await optimize(part.data, {
+          path: filePath,
+          multipass: true,
+          plugins: [
+            "convertStyleToAttrs",
+            "inlineStyles",
+            "prefixIds",
+            "removeDimensions",
+            {
+              name: "removeUselessStrokeAndFill",
+              params: {
+                removeNone: true,
+              },
+            },
+          ],
+        });
 
-    //     // write the optimized file to the same path
-    //     fs.writeFileSync(
-    //       `${isDev ? "" : "/tmp/"}${filePath}`,
-    //       result.data,
-    //       "utf8"
-    //     );
-    //   }
-    // });
+        // write the optimized file to the same path
+        fs.writeFileSync(
+          `${isDev ? "" : "/tmp/"}${filePath}`,
+          result.data,
+          "utf8"
+        );
+      }
+    }
 
     // create a new commit in a new branch with the files
     const branchName = "feat/new-assets";
@@ -120,21 +119,17 @@ const upload = async (req, res) => {
       repo,
       base_tree: "main",
       tree: parts.map((part) => {
-        // write file to tmp
-        fs.writeFileSync(
-          `${isDev ? "" : "/tmp/"}${part.filename}`,
-          part.data,
-          "utf8"
-        );
+        const tempPath = `${isDev ? "" : "/tmp/"}${part.filename}`;
+        // // write file to tmp
+        // fs.writeFileSync(tempPath, part.data, "utf8");
+
+        // console.log(part.data);
 
         return {
           path: `src/${part.filename}`,
           mode: "100644",
           type: "blob",
-          content: fs.readFileSync(
-            `${isDev ? "" : "/tmp/"}${part.filename}`,
-            "base64"
-          ),
+          content: fs.readFileSync(tempPath, "base64"),
         };
       }),
     });
