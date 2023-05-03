@@ -100,55 +100,75 @@ const upload = async (req, res) => {
       return `${isDev ? "" : "/tmp/"}${part.filename}`;
     });
 
-    // const tree = await octokit.git.createTree({
-    //   owner,
-    //   repo,
-    //   base_tree: "main",
-    //   tree: files.map((path) => {
-    //     return {
-    //       // remove first slash
-    //       path: path.replace("/", ""),
-    //       mode: "100644",
-    //       type: "blob",
-    //       content: fs.readFileSync(path, "base64"),
-    //     };
-    //   }),
-    // });
-
-    // get the sha of the last commit of the default branch
-    const mainRef = await octokit.git.getRef({
-      owner,
-      repo,
-      ref: "heads/main",
-    });
-
-    const newRef = await octokit.git.createRef({
+    // create a reference for a branch
+    await octokit.git.createRef({
       owner,
       repo,
       ref: `refs/heads/${branchName}`,
       sha: mainRef.data.object.sha,
     });
 
-    // map over files and createOrUpdateFileContents
-    const newFiles = files.map(async (file) => {
-      const cleanedPath = file.replace("/tmp/", "");
-      const contents = await octokit.repos.createOrUpdateFileContents({
-        owner,
-        repo,
-        path: `src/${cleanedPath}`,
-        message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
-        content: fs.readFileSync(file, "base64"),
-        branch: branchName,
-        committer: {
-          name: "WPDS Assets Manager 👩‍🌾",
-          email: "wpds@washingtonpost.com",
-        },
-        author: {
-          name: "WPDS Assets Manager 👩‍🌾",
-          email: "wpds@washingtonpost.com",
-        },
-      });
+    const tree = await octokit.git.createTree({
+      owner,
+      repo,
+      base_tree: "main",
+      tree: files.map((path) => {
+        const cleanedPath = file.replace("/tmp/", "");
+        return {
+          path: `src/${cleanedPath}`,
+          mode: "100644",
+          type: "blob",
+          content: fs.readFileSync(path, "base64"),
+        };
+      }),
     });
+
+    // create a commit with the new tree
+    const commit = await octokit.git.createCommit({
+      owner,
+      repo,
+      message: `feat: new assets - ${files
+        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
+        .join(", ")}`,
+      tree: tree.data.sha,
+      parents: ["main"],
+    });
+
+    // update a reference
+    const ref = await octokit.git.updateRef({
+      owner,
+      repo,
+      ref: `heads/${branchName}`,
+      sha: commit.data.sha,
+    });
+
+    // get the sha of the last commit of the default branch
+    // const mainRef = await octokit.git.getRef({
+    //   owner,
+    //   repo,
+    //   ref: "heads/main",
+    // });
+
+    // map over files and createOrUpdateFileContents
+    // const newFiles = files.map(async (file) => {
+    //   const cleanedPath = file.replace("/tmp/", "");
+    //   const contents = await octokit.repos.createOrUpdateFileContents({
+    //     owner,
+    //     repo,
+    //     path: `src/${cleanedPath}`,
+    //     message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
+    //     content: fs.readFileSync(file, "base64"),
+    //     branch: branchName,
+    //     committer: {
+    //       name: "WPDS Assets Manager 👩‍🌾",
+    //       email: "wpds@washingtonpost.com",
+    //     },
+    //     author: {
+    //       name: "WPDS Assets Manager 👩‍🌾",
+    //       email: "wpds@washingtonpost.com",
+    //     },
+    //   });
+    // });
 
     // await octokit.pulls.create({
     //   owner,
