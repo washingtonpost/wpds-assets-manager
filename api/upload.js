@@ -117,11 +117,12 @@ const upload = async (req, res) => {
     // loop over all files and create a commit for each
     for (const file of files) {
       console.log("🛋️", file);
+      const cleanedPath = file.replace("/tmp/", "");
       await octokit.repos.createOrUpdateFileContents({
         owner,
         repo,
-        path: `src/${file}`,
-        message: `feat: new asset - ${file.replaceAll(".svg", "")}`,
+        path: `src/${cleanedPath}`,
+        message: `feat: new asset - ${cleanedPath.replaceAll(".svg", "")}`,
         content: fs.readFileSync(file, "base64"),
         sha: tree.data.sha,
         branch: branchName,
