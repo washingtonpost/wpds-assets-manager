@@ -120,11 +120,21 @@ const upload = async (req, res) => {
       repo,
       base_tree: "main",
       tree: parts.map((part) => {
+        // write file to tmp
+        fs.writeFileSync(
+          `${isDev ? "" : "/tmp/"}${part.filename}`,
+          part.data,
+          "utf8"
+        );
+
         return {
           path: `src/${part.filename}`,
           mode: "100644",
           type: "blob",
-          content: part.data,
+          content: fs.readFileSync(
+            `${isDev ? "" : "/tmp/"}${part.filename}`,
+            "base64"
+          ),
         };
       }),
     });
