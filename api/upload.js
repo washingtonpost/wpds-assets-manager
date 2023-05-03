@@ -60,45 +60,45 @@ const upload = async (req, res) => {
     const buffer = Buffer.concat(chunks);
     const parts = parseMultipartFormdata(buffer, boundary);
 
-    parts.map(async (part) => {
-      console.log(part.filename);
-      if (part.filename) {
-        const filePath = part.filename;
-        // process the file with SVGO
-        const result = await optimize(part.data, {
-          path: filePath,
-          multipass: true,
-          plugins: [
-            "convertStyleToAttrs",
-            "inlineStyles",
-            "prefixIds",
-            "removeDimensions",
-            {
-              name: "removeUselessStrokeAndFill",
-              params: {
-                removeNone: true,
-              },
-            },
-          ],
-        });
+    // parts.map(async (part) => {
+    //   console.log(part.filename);
+    //   if (part.filename) {
+    //     const filePath = part.filename;
+    //     // process the file with SVGO
+    //     const result = await optimize(part.data, {
+    //       path: filePath,
+    //       multipass: true,
+    //       plugins: [
+    //         "convertStyleToAttrs",
+    //         "inlineStyles",
+    //         "prefixIds",
+    //         "removeDimensions",
+    //         {
+    //           name: "removeUselessStrokeAndFill",
+    //           params: {
+    //             removeNone: true,
+    //           },
+    //         },
+    //       ],
+    //     });
 
-        // write the optimized file to the same path
-        fs.writeFileSync(
-          `${isDev ? "" : "/tmp/"}${filePath}`,
-          result.data,
-          "utf8"
-        );
-      }
-    });
+    //     // write the optimized file to the same path
+    //     fs.writeFileSync(
+    //       `${isDev ? "" : "/tmp/"}${filePath}`,
+    //       result.data,
+    //       "utf8"
+    //     );
+    //   }
+    // });
 
     // create a new commit in a new branch with the files
     const branchName = "feat/new-assets";
 
-    const files = parts.map((part) => {
-      console.log(part.filename);
-      // add tmp to the path if we're not in dev
-      return `${isDev ? "" : "/tmp/"}${part.filename}`;
-    });
+    // const files = parts.map((part) => {
+    //   console.log(part.filename);
+    //   // add tmp to the path if we're not in dev
+    //   return `${isDev ? "" : "/tmp/"}${part.filename}`;
+    // });
 
     // get the sha of the last commit of the default branch
     const mainRef = await octokit.git.getRef({
@@ -119,13 +119,12 @@ const upload = async (req, res) => {
       owner,
       repo,
       base_tree: "main",
-      tree: files.map((path) => {
-        const cleanedPath = path.replace("/tmp/", "");
+      tree: parts.map((part) => {
         return {
-          path: `src/${cleanedPath}`,
+          path: `src/${part.filename}`,
           mode: "100644",
           type: "blob",
-          content: fs.readFileSync(path, "base64"),
+          content: part.data,
         };
       }),
     });
@@ -134,9 +133,7 @@ const upload = async (req, res) => {
     const commit = await octokit.git.createCommit({
       owner,
       repo,
-      message: `feat: new assets - ${files
-        .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
-        .join(", ")}`,
+      message: `feat: new assets - ${parts.map((part) => part.filename)}`,
       tree: tree.data.sha,
       parents: ["main"],
     });
