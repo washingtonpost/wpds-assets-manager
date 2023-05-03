@@ -114,7 +114,6 @@ const upload = async (req, res) => {
       repo,
       base_tree: "main",
       tree: files.map((path) => {
-        console.log(path);
         return {
           // remove first slash
           path: path.replace("/", ""),
@@ -171,16 +170,6 @@ const upload = async (req, res) => {
         .join(", ")}`,
       head: branchName,
       base: "main",
-      body: `${files
-        .map(
-          (file) =>
-            `<img src="https://raw.githubusercontent.com/washingtonpost/wpds-assets-manager/${branchName}/src/${file.replaceAll(
-              "/tmp/",
-              ""
-            )}" width="100" />`
-        )
-        .join("")}
-        `,
     });
 
     res.writeHead(200, { "Content-Type": "text/plain" });
