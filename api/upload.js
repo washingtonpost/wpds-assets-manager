@@ -173,10 +173,7 @@ const upload = async (req, res) => {
       base: "main",
       body: `# feat: new assets - ${files
         .map((file) => file.replaceAll(".svg", "").replaceAll("/tmp/", ""))
-        .join(", ")}
-
-        ### This pull request was created by the WPDS Assets Manager 👩‍🌾
-
+        .join(", ")} ### This pull request was created by the WPDS Assets Manager 👩‍🌾
         ${
           // embed the SVGs as images in the PR
           files
