@@ -100,6 +100,13 @@ const upload = async (req, res) => {
       return `${isDev ? "" : "/tmp/"}${part.filename}`;
     });
 
+    // get the sha of the last commit of the default branch
+    const mainRef = await octokit.git.getRef({
+      owner,
+      repo,
+      ref: "heads/main",
+    });
+
     // create a reference for a branch
     await octokit.git.createRef({
       owner,
