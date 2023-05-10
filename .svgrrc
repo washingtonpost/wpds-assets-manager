@@ -8,7 +8,6 @@ filenameCase: kebab
 svgo: true
 prettier: true
 svgoConfig: { removeTitle: false }
-replaceAttrValues: { "#111": "currentColor" }
 svgProps: { fill: "currentColor" }
 icon: false
 index: false
