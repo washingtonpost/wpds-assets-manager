@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.19.0...v1.19.1) (2023-05-10)
+
+
+### Bug Fixes
+
+* remove replaceAttrValues [#111](https://github.com/washingtonpost/wpds-assets-manager/issues/111) currentColor from svgrrc and assign currentColor or [#111](https://github.com/washingtonpost/wpds-assets-manager/issues/111) in each svg as appropriate [SRED-230] ([#103](https://github.com/washingtonpost/wpds-assets-manager/issues/103)) ([dd1b972](https://github.com/washingtonpost/wpds-assets-manager/commit/dd1b972c515e2890de67518f1ebb5c34153e082e))
+
 ## [1.19.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.18.0...v1.19.0) (2023-05-03)
 
 
