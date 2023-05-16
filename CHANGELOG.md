@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.19.1...v1.19.2) (2023-05-16)
+
+
+### Bug Fixes
+
+* fix remaining svgs by adding [#111](https://github.com/washingtonpost/wpds-assets-manager/issues/111) fill correctly [SRED-230] ([#105](https://github.com/washingtonpost/wpds-assets-manager/issues/105)) ([b2a5129](https://github.com/washingtonpost/wpds-assets-manager/commit/b2a5129096f5377a7c12c4c32ab03acb9c02d0b0))
+
 ## [1.19.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.19.0...v1.19.1) (2023-05-10)
 
 
