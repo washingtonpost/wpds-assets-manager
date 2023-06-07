@@ -1,6 +1,7 @@
 import React from "react";
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
+import UploadForm from "./UploadForm";
 
 const Section = Kit.styled("section", {
   display: "grid",
@@ -17,9 +18,23 @@ const AssetContainer = Kit.styled("div", {
 });
 
 const App = () => {
+  Kit.globalStyles();
+
+  // if app route is /upload then render upload form
+  // else render assets manager
+
+  const path = window.location.pathname;
+
+  if (path === "/upload") {
+    return <UploadForm />;
+  }
+
   return (
     <Section>
       <h1>WPDS Assets Manager</h1>
+
+      <a href="/upload">Upload Form</a>
+
       {Object.keys(AllAssets).map((Asset) => {
         const Component = AllAssets[Asset];
         return (
