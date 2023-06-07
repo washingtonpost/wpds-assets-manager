@@ -30,7 +30,7 @@ function parseMultipartFormdata(buffer, boundary) {
       part = { headers: {} };
     } else if (line.startsWith("Content-Disposition")) {
       const match = /name="([^"]+)"(?:; filename="([^"]+)")?/.exec(line);
-      part.filename = match[1];
+      part.name = match[1];
       part.filename = match[2];
     } else if (line.startsWith("Content-Type")) {
       part.contentType = line.split(": ")[1];
@@ -61,9 +61,8 @@ const upload = async (req, res) => {
     const parts = parseMultipartFormdata(buffer, boundary);
 
     for (const part of parts) {
-      if (part.filename) {
-        console.log(part);
-        const filePath = part.filename;
+      if (part.name) {
+        const filePath = part.name;
         // process the file with SVGO
         const result = await optimize(part.data, {
           path: filePath,
@@ -84,7 +83,7 @@ const upload = async (req, res) => {
 
         // write the optimized file to the same path
         fs.writeFileSync(
-          `${isDev ? "" : "/tmp/"}${filePath}`,
+          `${isDev ? "" : "/tmp/"}${part.filename}`,
           result.data,
           "utf8"
         );
