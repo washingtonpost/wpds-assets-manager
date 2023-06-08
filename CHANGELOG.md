@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.19.2...v1.20.0) (2023-06-08)
+
+
+### Features
+
+* new assets - add-playlist, crossword, sudoku, keyword, mini-crossword, playlist, github, clipboard ([5b42a9a](https://github.com/washingtonpost/wpds-assets-manager/commit/5b42a9aa9ff5caf4d6bebfbaa71e667ae99c5c24))
+
 ## [1.19.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.19.1...v1.19.2) (2023-05-16)
 
 
