@@ -146,7 +146,7 @@ const upload = async (req, res) => {
       sha: commit.data.sha,
     });
 
-    await octokit.pulls.create({
+    const pullRequest = await octokit.pulls.create({
       owner,
       repo,
       title: `feat: new assets - ${files
@@ -156,8 +156,17 @@ const upload = async (req, res) => {
       base: "main",
     });
 
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("File uploaded successfully");
+    // delete the temporary files
+    parts.forEach((part) => {
+      // delete the temporary file
+      fs.unlinkSync(`${isDev ? "" : "/tmp/"}${part.filename}`);
+    });
+
+    // direct to the pull request web page
+    res.writeHead(302, {
+      Location: pullRequest.data.html_url,
+    });
+    res.end();
   });
 };
 

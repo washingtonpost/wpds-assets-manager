@@ -1,6 +1,7 @@
 import React from "react";
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
+import { Form } from "./form";
 
 const Section = Kit.styled("section", {
   display: "grid",
@@ -16,50 +17,12 @@ const AssetContainer = Kit.styled("div", {
   borderRadius: "$075",
 });
 
-const UploadAssets = () => {
-  const [files, setFiles] = React.useState([]);
-
-  const handleFileChange = (e) => {
-    setFiles([...files, ...e.target.files]);
-  };
-
-  return (
-    <form action="/api/upload" method="POST" encType="multipart/form-data">
-      <input
-        type="file"
-        name="assets"
-        id="assets"
-        multiple
-        onChange={handleFileChange}
-      />
-      <button type="submit">Upload</button>
-
-      <h2>Assets</h2>
-      <ul>
-        {files.map((file) => (
-          <li key={file.name}>
-            {file.name}
-            <img
-              width={100}
-              height={100}
-              src={URL.createObjectURL(file)}
-              alt={file.name}
-            />
-          </li>
-        ))}
-      </ul>
-    </form>
-  );
-};
-
 const App = () => {
-  // if route is /upload, render <UploadAssets />
-  // else render the rest of the assets
   if (window.location.pathname === "/upload") {
     return (
       <>
         <h1>Upload Assets</h1>
-        <UploadAssets />
+        <Form />
       </>
     );
   }
