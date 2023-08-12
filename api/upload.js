@@ -62,7 +62,7 @@ const upload = async (req, res) => {
 
     for (const part of parts) {
       if (part.name) {
-        const filePath = part.name;
+        const filePath = part.filename;
         // process the file with SVGO
         const result = await optimize(part.data, {
           path: filePath,
@@ -94,7 +94,7 @@ const upload = async (req, res) => {
     const branchName = `feat/new-assets-${
       // use files names to create a unique branch name
       parts
-        .map((part) => part.name)
+        .map((part) => part.filename)
         .join("-")
         .replaceAll(".svg", "")
     }`;
@@ -111,17 +111,17 @@ const upload = async (req, res) => {
       repo,
       base_tree: mainRef.data.object.sha,
       tree: parts.map((part) => {
-        const tempPath = `${isDev ? "" : "/tmp/"}${part.name}`;
+        const tempPath = `${isDev ? "" : "/tmp/"}${part.filename}`;
 
         return {
-          path: `src/${part.name}`,
+          path: `src/${part.filename}`,
           mode: "100644",
           content: fs.readFileSync(tempPath, "utf8"),
         };
       }),
     });
 
-    const files = parts.map((part) => part.name);
+    const files = parts.map((part) => part.filename);
 
     // create a commit with the new tree
     const commit = await octokit.git.createCommit({
