@@ -3,78 +3,40 @@ import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
 import { Upload } from "./upload";
 
-const pageStyles = Kit.globalCss({
-  body: {
-    margin: 0,
-    padding: "$100",
-    fontFamily: "$body",
-  },
-  h1: {
-    fontSize: "$200",
-    fontWeight: "$bold",
-    marginBlockEnd: "$100",
-    fontFamily: "$headline",
-  },
-  h2: {
-    fontSize: "$150",
-    fontWeight: "$bold",
-    marginBlockEnd: "$100",
-    fontFamily: "$headline",
-  },
+const Section = Kit.styled("section", {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+  gridGap: "1rem",
+});
+
+const AssetContainer = Kit.styled("div", {
+  border: "1px solid $subtle",
+  background: Kit.theme.colors.subtle,
+  padding: "$100",
+  color: Kit.theme.colors.red100,
+  borderRadius: "$075",
 });
 
 const App = () => {
-  pageStyles();
-
   if (window.location.pathname === "/upload") {
     return <Upload />;
   }
 
   return (
-    <>
+    <Section>
       <h1>WPDS Assets Manager</h1>
-      <h2>
-        <a href="/upload">Upload Assets</a>
-      </h2>
-      <Kit.Box
-        css={{
-          display: "flex",
-          // masoncary layout with flexbox
-          flexWrap: "wrap",
-          gap: "$200",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingBlockEnd: "$200",
-        }}
-      >
-        {Object.keys(AllAssets).map((Asset) => {
-          const Component = AllAssets[Asset];
-          return (
-            <Kit.Box
-              as="article"
-              key={Asset}
-              css={{
-                background: "$alpha50",
-                borderRadius: "$100",
-                textAlign: "center",
-              }}
-            >
-              <h3>{Asset}</h3>
-              <Kit.Box
-                as="svg"
-                css={{
-                  color: "$pink200",
-                  border: "1px solid $pink200",
-                }}
-                asChild
-              >
-                <Component />
-              </Kit.Box>
-            </Kit.Box>
-          );
-        })}
-      </Kit.Box>
-    </>
+      {Object.keys(AllAssets).map((Asset) => {
+        const Component = AllAssets[Asset];
+        return (
+          <article key={Asset}>
+            <h2>{Asset}</h2>
+            <AssetContainer>
+              <Component />
+            </AssetContainer>
+          </article>
+        );
+      })}
+    </Section>
   );
 };
 
