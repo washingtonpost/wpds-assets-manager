@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.21.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.20.0...v1.21.0) (2023-08-14)
+
+
+### Features
+
+* add upload form ([4e57885](https://github.com/washingtonpost/wpds-assets-manager/commit/4e57885249cf7b27974b14ee0119c62abac8ac7c))
+* cool ([98a6d53](https://github.com/washingtonpost/wpds-assets-manager/commit/98a6d5360a01b497cc2b8892f0c409c3c8a43c09))
+* new assets - cancel-circle, diet, pause-circle ([#132](https://github.com/washingtonpost/wpds-assets-manager/issues/132)) ([7e810ba](https://github.com/washingtonpost/wpds-assets-manager/commit/7e810ba270300b521f8a43d3587215428ac6044a))
+
+
+### Bug Fixes
+
+* add rewrite ([188e844](https://github.com/washingtonpost/wpds-assets-manager/commit/188e844f80cb8c627218b31886521096d62b0989))
+* add rewrite ([ee902ce](https://github.com/washingtonpost/wpds-assets-manager/commit/ee902ce84a6081eb8648dfd60c9ead038d0a9681))
+* add rewrite ([144fe97](https://github.com/washingtonpost/wpds-assets-manager/commit/144fe97b6745e676c2259b005cdfd6d21154d794))
+* add styles ([4309e80](https://github.com/washingtonpost/wpds-assets-manager/commit/4309e80cdb190c3ead4a8fc880c43200adeb5573))
+
 ## [1.20.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.19.2...v1.20.0) (2023-06-08)
 
 
