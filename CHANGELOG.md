@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.21.0...v1.21.1) (2023-08-14)
+
+
+### Bug Fixes
+
+* undo unapproved design changes ([581d76c](https://github.com/washingtonpost/wpds-assets-manager/commit/581d76cc06de23cef628fc41be532be5e3219cdb))
+
 ## [1.21.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.20.0...v1.21.0) (2023-08-14)
 
 
