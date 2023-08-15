@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.22.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.21.1...v1.22.0) (2023-08-15)
+
+
+### Features
+
+* new assets - archive, archives, drag-handle-horizontal, drag-handle-vertical, unarchive ([8467b90](https://github.com/washingtonpost/wpds-assets-manager/commit/8467b909e620733a2896b417f4dbe0a6a6d31f24))
+
+
+### Bug Fixes
+
+* bugs ([6175aa4](https://github.com/washingtonpost/wpds-assets-manager/commit/6175aa42c16bbefd14a1476b998ab7bdb98d0714))
+
 ## [1.21.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.21.0...v1.21.1) (2023-08-14)
 
 
