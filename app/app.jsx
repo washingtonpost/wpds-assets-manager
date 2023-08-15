@@ -2,6 +2,7 @@ import React from "react";
 import * as Kit from "@washingtonpost/wpds-ui-kit";
 import * as AllAssets from "./../build";
 import { Upload } from "./upload";
+import { ErrorBoundary } from "./errors";
 
 const Section = Kit.styled("section", {
   display: "grid",
@@ -19,7 +20,11 @@ const AssetContainer = Kit.styled("div", {
 
 const App = () => {
   if (window.location.pathname === "/upload") {
-    return <Upload />;
+    return (
+      <ErrorBoundary fallback={<p>Something went wrong</p>}>
+        <Upload />
+      </ErrorBoundary>
+    );
   }
 
   return (

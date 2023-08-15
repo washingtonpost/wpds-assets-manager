@@ -61,7 +61,7 @@ const upload = async (req, res) => {
     const parts = parseMultipartFormdata(buffer, boundary);
 
     for (const part of parts) {
-      if (part.name) {
+      if (part.filename) {
         const filePath = part.filename;
         // process the file with SVGO
         const result = await optimize(part.data, {

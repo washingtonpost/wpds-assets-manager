@@ -3,9 +3,15 @@ import * as Kit from "@washingtonpost/wpds-ui-kit";
 
 export const Upload = () => {
   const [files, setFiles] = React.useState([]);
+  const [error, sendError] = React.useState(null);
 
   const handleFileChange = (e) => {
-    setFiles([...files, ...e.target.files]);
+    // if file extension is not an SVG, return
+    if (!e.target.files[0].name.match(/\.svg$/)) {
+      sendError("File must be an SVG");
+    } else {
+      setFiles([...files, ...e.target.files]);
+    }
   };
 
   return (
@@ -31,6 +37,23 @@ export const Upload = () => {
         }}
       >
         <Kit.Fieldset>
+          {error && (
+            <Kit.AlertBanner.Root
+              variant="error"
+              css={{
+                marginBlockEnd: "$200",
+              }}
+              dismissable={true}
+              onClick={() => {
+                sendError(null);
+                // clear out the file input
+                document.getElementById("assets").value = "";
+              }}
+            >
+              <Kit.AlertBanner.Trigger />
+              <Kit.AlertBanner.Content>{error}</Kit.AlertBanner.Content>
+            </Kit.AlertBanner.Root>
+          )}
           <Kit.InputText
             css={{
               width: "60vw",
@@ -61,7 +84,6 @@ export const Upload = () => {
               {file.name}
               <img
                 width={100}
-                height={100}
                 src={URL.createObjectURL(file)}
                 alt={file.name}
               />
