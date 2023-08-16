@@ -19,7 +19,7 @@ const AssetContainer = Kit.styled("div", {
 });
 
 const App = () => {
-  if (window.location.pathname === "/upload") {
+  if (window.location.pathname.includes("upload")) {
     return (
       <ErrorBoundary fallback={<p>Something went wrong</p>}>
         <Upload />
