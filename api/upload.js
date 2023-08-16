@@ -49,6 +49,9 @@ const upload = async (req, res) => {
   // const token = req.headers.authorization.replace("Bearer ", "");
   // const octokit = new Octokit({ auth: token });
 
+  // use html streams to parse the multipart form data
+  req.setEncoding("utf8");
+
   const chunks = [];
 
   req.on("data", (chunk) => {
@@ -96,7 +99,9 @@ const upload = async (req, res) => {
       parts
         .map((part) => part.filename)
         .join("-")
-        .replaceAll(".svg", "")
+      .replaceAll(".svg", "")
+      // random uuid
+    }-${Math.random().toString(36).substring(7)
     }`;
 
     // get the sha of the last commit of the default branch
@@ -164,8 +169,10 @@ const upload = async (req, res) => {
 
     // direct to the pull request web page
     res.writeHead(302, {
-      Location: pullRequest.data.html_url,
+      Location: // use referrer to redirect to the page where the form was submitted
+        req.headers.referer + "?success=true" + `&pr=${pullRequest.data.html_url}`,
     });
+
     res.end();
   });
 };

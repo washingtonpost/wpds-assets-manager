@@ -3,6 +3,14 @@
     {
       "source": "/upload",
       "destination": "/index.html"
+    },
+    {
+      "source": "/upload/success",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/upload/failure",
+      "destination": "/index.html"
     }
   ]
 }
