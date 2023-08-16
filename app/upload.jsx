@@ -89,7 +89,11 @@ export const Upload = () => {
                     // redirect to the pull request page
                     window.location.href = res.url;
                   } else {
-                    sendError("Something went wrong. Please try again.");
+                    sendError(
+                      `Something went wrong. Please try again. ${JSON.stringify(
+                        res
+                      )}`
+                    );
                   }
                 })
                 .catch((err) => {
