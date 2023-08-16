@@ -83,14 +83,18 @@ export const Upload = () => {
               fetch("/api/upload", {
                 method: "POST",
                 body: new FormData(document.getElementById("upload")),
-              }).then((res) => {
-                if (res.ok) {
-                  // redirect to the pull request page
-                  window.location.href = res.url;
-                } else {
-                  sendError("Something went wrong. Please try again.");
-                }
-              });
+              })
+                .then((res) => {
+                  if (res.ok) {
+                    // redirect to the pull request page
+                    window.location.href = res.url;
+                  } else {
+                    sendError("Something went wrong. Please try again.");
+                  }
+                })
+                .catch((err) => {
+                  sendError(`Something went wrong. Please try again. ${err}`);
+                });
             }
           : (e) => {
               e.preventDefault();
