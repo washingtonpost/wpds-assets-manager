@@ -83,6 +83,11 @@ export const Upload = () => {
               fetch("/api/upload", {
                 method: "POST",
                 body: new FormData(document.getElementById("upload")),
+                // send enctype header
+                headers: {
+                  enctype: "multipart/form-data",
+                },
+                redirect: "follow",
               })
                 .then((res) => {
                   if (res.ok) {
