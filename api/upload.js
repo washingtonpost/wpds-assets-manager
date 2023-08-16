@@ -45,13 +45,6 @@ function parseMultipartFormdata(buffer, boundary) {
 }
 
 const upload = async (req, res) => {
-  // use a PAT to authenticate with GitHub using a request.header
-  // const token = req.headers.authorization.replace("Bearer ", "");
-  // const octokit = new Octokit({ auth: token });
-
-  // use html streams to parse the multipart form data
-  req.setEncoding("utf8");
-
   const chunks = [];
 
   req.on("data", (chunk) => {
