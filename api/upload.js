@@ -62,10 +62,12 @@ const upload = async (req, res) => {
 
     for (const part of parts) {
       if (part.name) {
+        console.log("boop");
+        console.log("part", part);
         const filePath = part.name;
         // process the file with SVGO
         const result = await optimize(part.data, {
-          path: filePath,
+          path: `src/${part.filename}`,
           multipass: true,
           plugins: [
             "convertStyleToAttrs",
@@ -111,12 +113,33 @@ const upload = async (req, res) => {
       repo,
       base_tree: mainRef.data.object.sha,
       tree: parts.map((part) => {
+        console.log(part);
         const tempPath = `${isDev ? "" : "/tmp/"}${part.filename}`;
+        console.log(tempPath);
+
+        const result = optimize(part.data, {
+          path: `src/${part.filename}`,
+          multipass: true,
+          plugins: [
+            "convertStyleToAttrs",
+            "inlineStyles",
+            "prefixIds",
+            "removeDimensions",
+            {
+              name: "removeUselessStrokeAndFill",
+              params: {
+                removeNone: true,
+              },
+            },
+          ],
+        });
+
+        console.log(result);
 
         return {
-          path: `src/${part.filename}`,
+          path: result.path,
           mode: "100644",
-          content: fs.readFileSync(tempPath, "utf8"),
+          content: result.data,
         };
       }),
     });
