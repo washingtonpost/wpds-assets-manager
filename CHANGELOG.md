@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.23.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.22.0...v1.23.0) (2023-09-29)
+
+
+### Features
+
+* loading, success, and error UI ([#177](https://github.com/washingtonpost/wpds-assets-manager/issues/177)) ([82f8e43](https://github.com/washingtonpost/wpds-assets-manager/commit/82f8e43f5f27e04f9e4898f8fc58f27cb6876a0b))
+* new assets - publish, rss-icon, silence-alerts, threads, unpublish, x ([#189](https://github.com/washingtonpost/wpds-assets-manager/issues/189)) ([ece3596](https://github.com/washingtonpost/wpds-assets-manager/commit/ece359663f35019fe15fea9755588add0188e441))
+
 ## [1.22.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.21.1...v1.22.0) (2023-08-15)
 
 
