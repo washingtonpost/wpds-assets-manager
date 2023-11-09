@@ -10,7 +10,8 @@
   "files": [
     "dist",
     "asset",
-    "README.md"
+    "README.md",
+    "build"
   ],
   "author": "WPDS Support <wpds@washpost.com>",
   "license": "ISC",
