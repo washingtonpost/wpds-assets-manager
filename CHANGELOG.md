@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.23.0...v1.23.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* add build directory to files ([6de58db](https://github.com/washingtonpost/wpds-assets-manager/commit/6de58db737dbb143ed55e3ddd08c67b9272f35da))
+
 ## [1.23.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.22.0...v1.23.0) (2023-09-29)
 
 
