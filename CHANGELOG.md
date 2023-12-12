@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.23.1...v1.24.0) (2023-12-12)
+
+
+### Features
+
+* new assets - trophy-filled, trophy ([53c1d0b](https://github.com/washingtonpost/wpds-assets-manager/commit/53c1d0b0436a15834a5814a914ba0ce37482dbfe))
+
 ## [1.23.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.23.0...v1.23.1) (2023-11-09)
 
 
