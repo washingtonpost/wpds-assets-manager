@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.24.0...v1.25.0) (2024-03-29)
+
+
+### Features
+
+* add remaining sc icons ([#196](https://github.com/washingtonpost/wpds-assets-manager/issues/196)) ([577d2dd](https://github.com/washingtonpost/wpds-assets-manager/commit/577d2ddf8a145ce88d5f41178e7121073bd00836))
+
 ## [1.24.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.23.1...v1.24.0) (2023-12-12)
 
 
