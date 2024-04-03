@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/wpds-assets",
-  "version": "1.25.0",
+  "version": "2.0.0-alpha.0",
   "description": "WPDS Assets Manager",
   "homepage": "https://build.washingtonpost.com/foundations/wam",
   "main": "./asset/index.js",
@@ -39,6 +39,10 @@
   },
   "prettier": {},
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "overrides": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
