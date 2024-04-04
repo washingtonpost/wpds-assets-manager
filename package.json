@@ -22,7 +22,7 @@
     "@types/node": "^17.0.18",
     "@types/react": "18.2.55",
     "@vitejs/plugin-react": "^2.2.0",
-    "@washingtonpost/wpds-ui-kit": "2.0.0-alpha.7",
+    "@washingtonpost/wpds-ui-kit": "^2.0.0-alpha.8",
     "glob": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

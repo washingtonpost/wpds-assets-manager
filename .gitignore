@@ -121,3 +121,4 @@ build
 yalc.lock
 .vercel
 boop.svg
+.vscode/
