@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/wpds-assets",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.3",
   "description": "WPDS Assets Manager",
   "homepage": "https://build.washingtonpost.com/foundations/wam",
   "main": "./asset/index.js",
@@ -28,7 +28,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "svgo": "^2.8.0",
-    "typescript": "^4.8.4",
+    "typescript": "4.5.5",
     "vite": "^3.2.1"
   },
   "peerDependencies": {
