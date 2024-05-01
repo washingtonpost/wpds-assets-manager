@@ -8,6 +8,7 @@
   "types": "./asset/index.d.ts",
   "sideEffects": false,
   "files": [
+    "src",
     "dist",
     "asset",
     "README.md",
