@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/wpds-assets",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "WPDS Assets Manager",
   "homepage": "https://build.washingtonpost.com/foundations/wam",
   "main": "./asset/index.js",

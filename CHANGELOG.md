@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.0.0...v2.1.0) (2024-05-01)
+
+
+### Features
+
+* Update package.json ([#199](https://github.com/washingtonpost/wpds-assets-manager/issues/199)) ([4fa4b19](https://github.com/washingtonpost/wpds-assets-manager/commit/4fa4b199a9d6f420c0f932156c6c1ecae6b0bd26))
+
 ## [1.25.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v1.24.0...v1.25.0) (2024-03-29)
 
 
