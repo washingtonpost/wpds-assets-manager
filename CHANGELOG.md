@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.1.0...v2.2.0) (2024-05-02)
+
+
+### Features
+
+* new icons ([9b1db74](https://github.com/washingtonpost/wpds-assets-manager/commit/9b1db74e4865db665939da307259717c05640634))
+
 ## [2.1.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.0.0...v2.1.0) (2024-05-01)
 
 
