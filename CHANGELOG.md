@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.2.0...v2.3.0) (2024-05-30)
+
+
+### Features
+
+* add the seven logo ([#203](https://github.com/washingtonpost/wpds-assets-manager/issues/203)) ([bd6185a](https://github.com/washingtonpost/wpds-assets-manager/commit/bd6185afa430ab406a125b7becf7ba8ab99f089c))
+
 ## [2.2.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.1.0...v2.2.0) (2024-05-02)
 
 
