@@ -1,6 +1,5 @@
 build-library:
 	npx @svgr/cli --out-dir build src
 	rm -rf asset/*
-	tsc --noEmit false --isolatedModules false --sourceMap true --declaration -m commonjs --outDir asset
-	tsc --noEmit false --isolatedModules false --sourceMap true --outDir asset/esm
+	npx tsup
 	npx vite build
