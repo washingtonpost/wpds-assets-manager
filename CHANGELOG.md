@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.3.0...v2.4.0) (2024-07-08)
+
+
+### Features
+
+* upgrade to better esm support ([#205](https://github.com/washingtonpost/wpds-assets-manager/issues/205)) ([9bd7eb8](https://github.com/washingtonpost/wpds-assets-manager/commit/9bd7eb84878748d2d03df954c297cb961fa302e4))
+
 ## [2.3.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.2.0...v2.3.0) (2024-05-30)
 
 
