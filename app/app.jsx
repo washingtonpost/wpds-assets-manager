@@ -4,6 +4,8 @@ import * as AllAssets from "./../asset";
 import { Upload } from "./upload";
 import { ErrorBoundary } from "./errors";
 
+console.log(AllAssets)
+
 const Section = Kit.styled("section", {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
