@@ -61,6 +61,758 @@
     ".": {
       "import": "./asset/index.mjs",
       "require": "./asset/index.js"
+    },
+    "./asset/add": {
+      "import": "./asset/add.mjs",
+      "require": "./asset/add.js"
+    },
+    "./asset/15-back": {
+      "import": "./asset/15-back.mjs",
+      "require": "./asset/15-back.js"
+    },
+    "./asset/15-forward": {
+      "import": "./asset/15-forward.mjs",
+      "require": "./asset/15-forward.js"
+    },
+    "./asset/Indeterminate": {
+      "import": "./asset/Indeterminate.mjs",
+      "require": "./asset/Indeterminate.js"
+    },
+    "./asset/add-playlist": {
+      "import": "./asset/add-playlist.mjs",
+      "require": "./asset/add-playlist.js"
+    },
+    "./asset/ai": {
+      "import": "./asset/ai.mjs",
+      "require": "./asset/ai.js"
+    },
+    "./asset/amazon-music": {
+      "import": "./asset/amazon-music.mjs",
+      "require": "./asset/amazon-music.js"
+    },
+    "./asset/amazon": {
+      "import": "./asset/amazon.mjs",
+      "require": "./asset/amazon.js"
+    },
+    "./asset/apple-podcast": {
+      "import": "./asset/apple-podcast.mjs",
+      "require": "./asset/apple-podcast.js"
+    },
+    "./asset/apple": {
+      "import": "./asset/apple.mjs",
+      "require": "./asset/apple.js"
+    },
+    "./asset/archive": {
+      "import": "./asset/archive.mjs",
+      "require": "./asset/archive.js"
+    },
+    "./asset/archives": {
+      "import": "./asset/archives.mjs",
+      "require": "./asset/archives.js"
+    },
+    "./asset/arrow-down": {
+      "import": "./asset/arrow-down.mjs",
+      "require": "./asset/arrow-down.js"
+    },
+    "./asset/arrow-left": {
+      "import": "./asset/arrow-left.mjs",
+      "require": "./asset/arrow-left.js"
+    },
+    "./asset/arrow-right": {
+      "import": "./asset/arrow-right.mjs",
+      "require": "./asset/arrow-right.js"
+    },
+    "./asset/arrow-up": {
+      "import": "./asset/arrow-up.mjs",
+      "require": "./asset/arrow-up.js"
+    },
+    "./asset/article": {
+      "import": "./asset/article.mjs",
+      "require": "./asset/article.js"
+    },
+    "./asset/bell": {
+      "import": "./asset/bell.mjs",
+      "require": "./asset/bell.js"
+    },
+    "./asset/bookmark-solid": {
+      "import": "./asset/bookmark-solid.mjs",
+      "require": "./asset/bookmark-solid.js"
+    },
+    "./asset/bookmark": {
+      "import": "./asset/bookmark.mjs",
+      "require": "./asset/bookmark.js"
+    },
+    "./asset/building": {
+      "import": "./asset/building.mjs",
+      "require": "./asset/building.js"
+    },
+    "./asset/by-the-way": {
+      "import": "./asset/by-the-way.mjs",
+      "require": "./asset/by-the-way.js"
+    },
+    "./asset/calendar": {
+      "import": "./asset/calendar.mjs",
+      "require": "./asset/calendar.js"
+    },
+    "./asset/camera": {
+      "import": "./asset/camera.mjs",
+      "require": "./asset/camera.js"
+    },
+    "./asset/cancel-circle": {
+      "import": "./asset/cancel-circle.mjs",
+      "require": "./asset/cancel-circle.js"
+    },
+    "./asset/cc": {
+      "import": "./asset/cc.mjs",
+      "require": "./asset/cc.js"
+    },
+    "./asset/chart": {
+      "import": "./asset/chart.mjs",
+      "require": "./asset/chart.js"
+    },
+    "./asset/check": {
+      "import": "./asset/check.mjs",
+      "require": "./asset/check.js"
+    },
+    "./asset/chevron-down": {
+      "import": "./asset/chevron-down.mjs",
+      "require": "./asset/chevron-down.js"
+    },
+    "./asset/chevron-left": {
+      "import": "./asset/chevron-left.mjs",
+      "require": "./asset/chevron-left.js"
+    },
+    "./asset/chevron-right": {
+      "import": "./asset/chevron-right.mjs",
+      "require": "./asset/chevron-right.js"
+    },
+    "./asset/chevron-up": {
+      "import": "./asset/chevron-up.mjs",
+      "require": "./asset/chevron-up.js"
+    },
+    "./asset/clipboard": {
+      "import": "./asset/clipboard.mjs",
+      "require": "./asset/clipboard.js"
+    },
+    "./asset/close": {
+      "import": "./asset/close.mjs",
+      "require": "./asset/close.js"
+    },
+    "./asset/code": {
+      "import": "./asset/code.mjs",
+      "require": "./asset/code.js"
+    },
+    "./asset/comment": {
+      "import": "./asset/comment.mjs",
+      "require": "./asset/comment.js"
+    },
+    "./asset/comments": {
+      "import": "./asset/comments.mjs",
+      "require": "./asset/comments.js"
+    },
+    "./asset/copy": {
+      "import": "./asset/copy.mjs",
+      "require": "./asset/copy.js"
+    },
+    "./asset/course": {
+      "import": "./asset/course.mjs",
+      "require": "./asset/course.js"
+    },
+    "./asset/crop": {
+      "import": "./asset/crop.mjs",
+      "require": "./asset/crop.js"
+    },
+    "./asset/crossword": {
+      "import": "./asset/crossword.mjs",
+      "require": "./asset/crossword.js"
+    },
+    "./asset/diamond": {
+      "import": "./asset/diamond.mjs",
+      "require": "./asset/diamond.js"
+    },
+    "./asset/diet": {
+      "import": "./asset/diet.mjs",
+      "require": "./asset/diet.js"
+    },
+    "./asset/digital-archives": {
+      "import": "./asset/digital-archives.mjs",
+      "require": "./asset/digital-archives.js"
+    },
+    "./asset/dots-horizontal": {
+      "import": "./asset/dots-horizontal.mjs",
+      "require": "./asset/dots-horizontal.js"
+    },
+    "./asset/dots-vertical": {
+      "import": "./asset/dots-vertical.mjs",
+      "require": "./asset/dots-vertical.js"
+    },
+    "./asset/download": {
+      "import": "./asset/download.mjs",
+      "require": "./asset/download.js"
+    },
+    "./asset/drag-handle-horizontal": {
+      "import": "./asset/drag-handle-horizontal.mjs",
+      "require": "./asset/drag-handle-horizontal.js"
+    },
+    "./asset/drag-handle-vertical": {
+      "import": "./asset/drag-handle-vertical.mjs",
+      "require": "./asset/drag-handle-vertical.js"
+    },
+    "./asset/ebook": {
+      "import": "./asset/ebook.mjs",
+      "require": "./asset/ebook.js"
+    },
+    "./asset/edit": {
+      "import": "./asset/edit.mjs",
+      "require": "./asset/edit.js"
+    },
+    "./asset/election_bluebackground": {
+      "import": "./asset/election_bluebackground.mjs",
+      "require": "./asset/election_bluebackground.js"
+    },
+    "./asset/election_default": {
+      "import": "./asset/election_default.mjs",
+      "require": "./asset/election_default.js"
+    },
+    "./asset/election_redbackground": {
+      "import": "./asset/election_redbackground.mjs",
+      "require": "./asset/election_redbackground.js"
+    },
+    "./asset/elections": {
+      "import": "./asset/elections.mjs",
+      "require": "./asset/elections.js"
+    },
+    "./asset/email-filled": {
+      "import": "./asset/email-filled.mjs",
+      "require": "./asset/email-filled.js"
+    },
+    "./asset/email": {
+      "import": "./asset/email.mjs",
+      "require": "./asset/email.js"
+    },
+    "./asset/error": {
+      "import": "./asset/error.mjs",
+      "require": "./asset/error.js"
+    },
+    "./asset/external": {
+      "import": "./asset/external.mjs",
+      "require": "./asset/external.js"
+    },
+    "./asset/face-negative-filled": {
+      "import": "./asset/face-negative-filled.mjs",
+      "require": "./asset/face-negative-filled.js"
+    },
+    "./asset/face-negative": {
+      "import": "./asset/face-negative.mjs",
+      "require": "./asset/face-negative.js"
+    },
+    "./asset/face-neutral-filled": {
+      "import": "./asset/face-neutral-filled.mjs",
+      "require": "./asset/face-neutral-filled.js"
+    },
+    "./asset/face-neutral": {
+      "import": "./asset/face-neutral.mjs",
+      "require": "./asset/face-neutral.js"
+    },
+    "./asset/face-positive-filled": {
+      "import": "./asset/face-positive-filled.mjs",
+      "require": "./asset/face-positive-filled.js"
+    },
+    "./asset/face-positive": {
+      "import": "./asset/face-positive.mjs",
+      "require": "./asset/face-positive.js"
+    },
+    "./asset/facebook-logo": {
+      "import": "./asset/facebook-logo.mjs",
+      "require": "./asset/facebook-logo.js"
+    },
+    "./asset/facebook": {
+      "import": "./asset/facebook.mjs",
+      "require": "./asset/facebook.js"
+    },
+    "./asset/filter": {
+      "import": "./asset/filter.mjs",
+      "require": "./asset/filter.js"
+    },
+    "./asset/flag": {
+      "import": "./asset/flag.mjs",
+      "require": "./asset/flag.js"
+    },
+    "./asset/for-you": {
+      "import": "./asset/for-you.mjs",
+      "require": "./asset/for-you.js"
+    },
+    "./asset/forward": {
+      "import": "./asset/forward.mjs",
+      "require": "./asset/forward.js"
+    },
+    "./asset/fullscreen-exit": {
+      "import": "./asset/fullscreen-exit.mjs",
+      "require": "./asset/fullscreen-exit.js"
+    },
+    "./asset/fullscreen": {
+      "import": "./asset/fullscreen.mjs",
+      "require": "./asset/fullscreen.js"
+    },
+    "./asset/geopin": {
+      "import": "./asset/geopin.mjs",
+      "require": "./asset/geopin.js"
+    },
+    "./asset/gift": {
+      "import": "./asset/gift.mjs",
+      "require": "./asset/gift.js"
+    },
+    "./asset/github": {
+      "import": "./asset/github.mjs",
+      "require": "./asset/github.js"
+    },
+    "./asset/globe": {
+      "import": "./asset/globe.mjs",
+      "require": "./asset/globe.js"
+    },
+    "./asset/google-podcast": {
+      "import": "./asset/google-podcast.mjs",
+      "require": "./asset/google-podcast.js"
+    },
+    "./asset/google": {
+      "import": "./asset/google.mjs",
+      "require": "./asset/google.js"
+    },
+    "./asset/grid-icon": {
+      "import": "./asset/grid-icon.mjs",
+      "require": "./asset/grid-icon.js"
+    },
+    "./asset/headphones-outline": {
+      "import": "./asset/headphones-outline.mjs",
+      "require": "./asset/headphones-outline.js"
+    },
+    "./asset/headphones": {
+      "import": "./asset/headphones.mjs",
+      "require": "./asset/headphones.js"
+    },
+    "./asset/help": {
+      "import": "./asset/help.mjs",
+      "require": "./asset/help.js"
+    },
+    "./asset/helpdesk-bw": {
+      "import": "./asset/helpdesk-bw.mjs",
+      "require": "./asset/helpdesk-bw.js"
+    },
+    "./asset/helpdesk-primary": {
+      "import": "./asset/helpdesk-primary.mjs",
+      "require": "./asset/helpdesk-primary.js"
+    },
+    "./asset/helpdesk-secondary": {
+      "import": "./asset/helpdesk-secondary.mjs",
+      "require": "./asset/helpdesk-secondary.js"
+    },
+    "./asset/hide": {
+      "import": "./asset/hide.mjs",
+      "require": "./asset/hide.js"
+    },
+    "./asset/home-filled": {
+      "import": "./asset/home-filled.mjs",
+      "require": "./asset/home-filled.js"
+    },
+    "./asset/home": {
+      "import": "./asset/home.mjs",
+      "require": "./asset/home.js"
+    },
+    "./asset/horoscopes": {
+      "import": "./asset/horoscopes.mjs",
+      "require": "./asset/horoscopes.js"
+    },
+    "./asset/image": {
+      "import": "./asset/image.mjs",
+      "require": "./asset/image.js"
+    },
+    "./asset/info": {
+      "import": "./asset/info.mjs",
+      "require": "./asset/info.js"
+    },
+    "./asset/instagram": {
+      "import": "./asset/instagram.mjs",
+      "require": "./asset/instagram.js"
+    },
+    "./asset/keyword": {
+      "import": "./asset/keyword.mjs",
+      "require": "./asset/keyword.js"
+    },
+    "./asset/like-solid": {
+      "import": "./asset/like-solid.mjs",
+      "require": "./asset/like-solid.js"
+    },
+    "./asset/like": {
+      "import": "./asset/like.mjs",
+      "require": "./asset/like.js"
+    },
+    "./asset/link": {
+      "import": "./asset/link.mjs",
+      "require": "./asset/link.js"
+    },
+    "./asset/linked-in": {
+      "import": "./asset/linked-in.mjs",
+      "require": "./asset/linked-in.js"
+    },
+    "./asset/loading": {
+      "import": "./asset/loading.mjs",
+      "require": "./asset/loading.js"
+    },
+    "./asset/lock": {
+      "import": "./asset/lock.mjs",
+      "require": "./asset/lock.js"
+    },
+    "./asset/mahjongg": {
+      "import": "./asset/mahjongg.mjs",
+      "require": "./asset/mahjongg.js"
+    },
+    "./asset/mastodon": {
+      "import": "./asset/mastodon.mjs",
+      "require": "./asset/mastodon.js"
+    },
+    "./asset/megaphone": {
+      "import": "./asset/megaphone.mjs",
+      "require": "./asset/megaphone.js"
+    },
+    "./asset/menu": {
+      "import": "./asset/menu.mjs",
+      "require": "./asset/menu.js"
+    },
+    "./asset/mini-crossword": {
+      "import": "./asset/mini-crossword.mjs",
+      "require": "./asset/mini-crossword.js"
+    },
+    "./asset/mixer-horizontal": {
+      "import": "./asset/mixer-horizontal.mjs",
+      "require": "./asset/mixer-horizontal.js"
+    },
+    "./asset/mixer-vertical": {
+      "import": "./asset/mixer-vertical.mjs",
+      "require": "./asset/mixer-vertical.js"
+    },
+    "./asset/moon": {
+      "import": "./asset/moon.mjs",
+      "require": "./asset/moon.js"
+    },
+    "./asset/mute": {
+      "import": "./asset/mute.mjs",
+      "require": "./asset/mute.js"
+    },
+    "./asset/newspaper-filled": {
+      "import": "./asset/newspaper-filled.mjs",
+      "require": "./asset/newspaper-filled.js"
+    },
+    "./asset/newspaper": {
+      "import": "./asset/newspaper.mjs",
+      "require": "./asset/newspaper.js"
+    },
+    "./asset/next": {
+      "import": "./asset/next.mjs",
+      "require": "./asset/next.js"
+    },
+    "./asset/offer": {
+      "import": "./asset/offer.mjs",
+      "require": "./asset/offer.js"
+    },
+    "./asset/olympics-dark": {
+      "import": "./asset/olympics-dark.mjs",
+      "require": "./asset/olympics-dark.js"
+    },
+    "./asset/olympics": {
+      "import": "./asset/olympics.mjs",
+      "require": "./asset/olympics.js"
+    },
+    "./asset/on-the-record": {
+      "import": "./asset/on-the-record.mjs",
+      "require": "./asset/on-the-record.js"
+    },
+    "./asset/pause-circle": {
+      "import": "./asset/pause-circle.mjs",
+      "require": "./asset/pause-circle.js"
+    },
+    "./asset/pause": {
+      "import": "./asset/pause.mjs",
+      "require": "./asset/pause.js"
+    },
+    "./asset/people": {
+      "import": "./asset/people.mjs",
+      "require": "./asset/people.js"
+    },
+    "./asset/phone": {
+      "import": "./asset/phone.mjs",
+      "require": "./asset/phone.js"
+    },
+    "./asset/pin-filled": {
+      "import": "./asset/pin-filled.mjs",
+      "require": "./asset/pin-filled.js"
+    },
+    "./asset/pin": {
+      "import": "./asset/pin.mjs",
+      "require": "./asset/pin.js"
+    },
+    "./asset/pinterest": {
+      "import": "./asset/pinterest.mjs",
+      "require": "./asset/pinterest.js"
+    },
+    "./asset/pip": {
+      "import": "./asset/pip.mjs",
+      "require": "./asset/pip.js"
+    },
+    "./asset/play": {
+      "import": "./asset/play.mjs",
+      "require": "./asset/play.js"
+    },
+    "./asset/playlist": {
+      "import": "./asset/playlist.mjs",
+      "require": "./asset/playlist.js"
+    },
+    "./asset/prev": {
+      "import": "./asset/prev.mjs",
+      "require": "./asset/prev.js"
+    },
+    "./asset/print": {
+      "import": "./asset/print.mjs",
+      "require": "./asset/print.js"
+    },
+    "./asset/profile-filled": {
+      "import": "./asset/profile-filled.mjs",
+      "require": "./asset/profile-filled.js"
+    },
+    "./asset/profile": {
+      "import": "./asset/profile.mjs",
+      "require": "./asset/profile.js"
+    },
+    "./asset/publish": {
+      "import": "./asset/publish.mjs",
+      "require": "./asset/publish.js"
+    },
+    "./asset/qatar-world-cup-bw": {
+      "import": "./asset/qatar-world-cup-bw.mjs",
+      "require": "./asset/qatar-world-cup-bw.js"
+    },
+    "./asset/qatar-world-cup-reverse": {
+      "import": "./asset/qatar-world-cup-reverse.mjs",
+      "require": "./asset/qatar-world-cup-reverse.js"
+    },
+    "./asset/qatar-world-cup": {
+      "import": "./asset/qatar-world-cup.mjs",
+      "require": "./asset/qatar-world-cup.js"
+    },
+    "./asset/recipe": {
+      "import": "./asset/recipe.mjs",
+      "require": "./asset/recipe.js"
+    },
+    "./asset/reddit": {
+      "import": "./asset/reddit.mjs",
+      "require": "./asset/reddit.js"
+    },
+    "./asset/refresh": {
+      "import": "./asset/refresh.mjs",
+      "require": "./asset/refresh.js"
+    },
+    "./asset/robots": {
+      "import": "./asset/robots.mjs",
+      "require": "./asset/robots.js"
+    },
+    "./asset/rss-icon": {
+      "import": "./asset/rss-icon.mjs",
+      "require": "./asset/rss-icon.js"
+    },
+    "./asset/rss": {
+      "import": "./asset/rss.mjs",
+      "require": "./asset/rss.js"
+    },
+    "./asset/search-filled": {
+      "import": "./asset/search-filled.mjs",
+      "require": "./asset/search-filled.js"
+    },
+    "./asset/search-nav": {
+      "import": "./asset/search-nav.mjs",
+      "require": "./asset/search-nav.js"
+    },
+    "./asset/search": {
+      "import": "./asset/search.mjs",
+      "require": "./asset/search.js"
+    },
+    "./asset/settings": {
+      "import": "./asset/settings.mjs",
+      "require": "./asset/settings.js"
+    },
+    "./asset/share": {
+      "import": "./asset/share.mjs",
+      "require": "./asset/share.js"
+    },
+    "./asset/show": {
+      "import": "./asset/show.mjs",
+      "require": "./asset/show.js"
+    },
+    "./asset/shuffle": {
+      "import": "./asset/shuffle.mjs",
+      "require": "./asset/shuffle.js"
+    },
+    "./asset/silence-alerts": {
+      "import": "./asset/silence-alerts.mjs",
+      "require": "./asset/silence-alerts.js"
+    },
+    "./asset/solitaire": {
+      "import": "./asset/solitaire.mjs",
+      "require": "./asset/solitaire.js"
+    },
+    "./asset/soundwave": {
+      "import": "./asset/soundwave.mjs",
+      "require": "./asset/soundwave.js"
+    },
+    "./asset/spotify": {
+      "import": "./asset/spotify.mjs",
+      "require": "./asset/spotify.js"
+    },
+    "./asset/star-full": {
+      "import": "./asset/star-full.mjs",
+      "require": "./asset/star-full.js"
+    },
+    "./asset/star-half": {
+      "import": "./asset/star-half.mjs",
+      "require": "./asset/star-half.js"
+    },
+    "./asset/star": {
+      "import": "./asset/star.mjs",
+      "require": "./asset/star.js"
+    },
+    "./asset/stitcher": {
+      "import": "./asset/stitcher.mjs",
+      "require": "./asset/stitcher.js"
+    },
+    "./asset/success": {
+      "import": "./asset/success.mjs",
+      "require": "./asset/success.js"
+    },
+    "./asset/sudoku": {
+      "import": "./asset/sudoku.mjs",
+      "require": "./asset/sudoku.js"
+    },
+    "./asset/sun": {
+      "import": "./asset/sun.mjs",
+      "require": "./asset/sun.js"
+    },
+    "./asset/switch": {
+      "import": "./asset/switch.mjs",
+      "require": "./asset/switch.js"
+    },
+    "./asset/sync": {
+      "import": "./asset/sync.mjs",
+      "require": "./asset/sync.js"
+    },
+    "./asset/the-7-black": {
+      "import": "./asset/the-7-black.mjs",
+      "require": "./asset/the-7-black.js"
+    },
+    "./asset/the-7-blue": {
+      "import": "./asset/the-7-blue.mjs",
+      "require": "./asset/the-7-blue.js"
+    },
+    "./asset/the-7": {
+      "import": "./asset/the-7.mjs",
+      "require": "./asset/the-7.js"
+    },
+    "./asset/threads": {
+      "import": "./asset/threads.mjs",
+      "require": "./asset/threads.js"
+    },
+    "./asset/time": {
+      "import": "./asset/time.mjs",
+      "require": "./asset/time.js"
+    },
+    "./asset/tooled-washington-post": {
+      "import": "./asset/tooled-washington-post.mjs",
+      "require": "./asset/tooled-washington-post.js"
+    },
+    "./asset/trash": {
+      "import": "./asset/trash.mjs",
+      "require": "./asset/trash.js"
+    },
+    "./asset/trending": {
+      "import": "./asset/trending.mjs",
+      "require": "./asset/trending.js"
+    },
+    "./asset/trophy-filled": {
+      "import": "./asset/trophy-filled.mjs",
+      "require": "./asset/trophy-filled.js"
+    },
+    "./asset/trophy": {
+      "import": "./asset/trophy.mjs",
+      "require": "./asset/trophy.js"
+    },
+    "./asset/tv": {
+      "import": "./asset/tv.mjs",
+      "require": "./asset/tv.js"
+    },
+    "./asset/twitch": {
+      "import": "./asset/twitch.mjs",
+      "require": "./asset/twitch.js"
+    },
+    "./asset/twitter": {
+      "import": "./asset/twitter.mjs",
+      "require": "./asset/twitter.js"
+    },
+    "./asset/unarchive": {
+      "import": "./asset/unarchive.mjs",
+      "require": "./asset/unarchive.js"
+    },
+    "./asset/unlock": {
+      "import": "./asset/unlock.mjs",
+      "require": "./asset/unlock.js"
+    },
+    "./asset/unpublish": {
+      "import": "./asset/unpublish.mjs",
+      "require": "./asset/unpublish.js"
+    },
+    "./asset/video": {
+      "import": "./asset/video.mjs",
+      "require": "./asset/video.js"
+    },
+    "./asset/volume": {
+      "import": "./asset/volume.mjs",
+      "require": "./asset/volume.js"
+    },
+    "./asset/voraciously": {
+      "import": "./asset/voraciously.mjs",
+      "require": "./asset/voraciously.js"
+    },
+    "./asset/warning": {
+      "import": "./asset/warning.mjs",
+      "require": "./asset/warning.js"
+    },
+    "./asset/washington-post-magazine": {
+      "import": "./asset/washington-post-magazine.mjs",
+      "require": "./asset/washington-post-magazine.js"
+    },
+    "./asset/washington-post-white": {
+      "import": "./asset/washington-post-white.mjs",
+      "require": "./asset/washington-post-white.js"
+    },
+    "./asset/washington-post": {
+      "import": "./asset/washington-post.mjs",
+      "require": "./asset/washington-post.js"
+    },
+    "./asset/wp-mark-white": {
+      "import": "./asset/wp-mark-white.mjs",
+      "require": "./asset/wp-mark-white.js"
+    },
+    "./asset/wp-mark": {
+      "import": "./asset/wp-mark.mjs",
+      "require": "./asset/wp-mark.js"
+    },
+    "./asset/wp": {
+      "import": "./asset/wp.mjs",
+      "require": "./asset/wp.js"
+    },
+    "./asset/x": {
+      "import": "./asset/x.mjs",
+      "require": "./asset/x.js"
+    },
+    "./asset/youtube": {
+      "import": "./asset/youtube.mjs",
+      "require": "./asset/youtube.js"
     }
   }
 }
