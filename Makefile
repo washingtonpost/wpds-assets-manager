@@ -3,6 +3,5 @@ build-library:
 	rm -rf asset/*
 	npx tsup
 	npx vite build
-  node ./scripts/exports.mjs
-
+	npm run build-exports
 
