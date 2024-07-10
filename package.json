@@ -38,8 +38,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "build": "make build-library",
-    "build-exports": "node ./scripts/exports.mjs"
+    "build": "make build-library"
   },
   "prettier": {},
   "dependencies": {
