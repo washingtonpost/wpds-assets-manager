@@ -1,8 +1,10 @@
 import React from "react";
 import * as Kit from "@washingtonpost/wpds-ui-kit";
-import * as AllAssets from "./../build";
+import * as AllAssets from "./../asset";
 import { Upload } from "./upload";
 import { ErrorBoundary } from "./errors";
+
+console.log(AllAssets)
 
 const Section = Kit.styled("section", {
   display: "grid",

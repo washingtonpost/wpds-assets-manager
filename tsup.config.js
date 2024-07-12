@@ -6,9 +6,6 @@ export default defineConfig({
     "!src/**/*.test.(ts|tsx)",
     "!src/**/*.stories.(ts|tsx)",
   ],
-  footer: {
-    js: "module.exports = module.exports.default;",
-  },
   loader: {
     ".js": "jsx",
   },
