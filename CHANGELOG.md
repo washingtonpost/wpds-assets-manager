@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.4.0...v2.4.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* remove default export setup ([#207](https://github.com/washingtonpost/wpds-assets-manager/issues/207)) ([8c89c36](https://github.com/washingtonpost/wpds-assets-manager/commit/8c89c368ad2dec870128dada9b33667dff67d349))
+
 ## [2.4.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.3.0...v2.4.0) (2024-07-08)
 
 
