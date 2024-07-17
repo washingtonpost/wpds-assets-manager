@@ -909,6 +909,10 @@
     "./asset/sun-moon": {
       "import": "./asset/sun-moon.mjs",
       "require": "./asset/sun-moon.js"
+    },
+    "./asset/asset": {
+      "import": "./asset/asset.mjs",
+      "require": "./asset/asset.js"
     }
   }
 }
