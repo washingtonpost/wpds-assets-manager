@@ -814,10 +814,6 @@
       "import": "./asset/youtube.mjs",
       "require": "./asset/youtube.js"
     },
-    "./asset/": {
-      "import": "./asset/.mjs",
-      "require": "./asset/.js"
-    },
     "./asset/1-2-horizontal-grid": {
       "import": "./asset/1-2-horizontal-grid.mjs",
       "require": "./asset/1-2-horizontal-grid.js"
@@ -881,10 +877,6 @@
     "./asset/note": {
       "import": "./asset/note.mjs",
       "require": "./asset/note.js"
-    },
-    "./asset/search-nav-filled (1)": {
-      "import": "./asset/search-nav-filled (1).mjs",
-      "require": "./asset/search-nav-filled (1).js"
     },
     "./asset/send": {
       "import": "./asset/send.mjs",
