@@ -905,6 +905,10 @@
     "./asset/wrap-right": {
       "import": "./asset/wrap-right.mjs",
       "require": "./asset/wrap-right.js"
+    },
+    "./asset/sun-moon": {
+      "import": "./asset/sun-moon.mjs",
+      "require": "./asset/sun-moon.js"
     }
   }
 }
