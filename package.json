@@ -905,6 +905,10 @@
     "./asset/asset": {
       "import": "./asset/asset.mjs",
       "require": "./asset/asset.js"
+    },
+    "./asset/postpulse": {
+      "import": "./asset/postpulse.mjs",
+      "require": "./asset/postpulse.js"
     }
   }
 }
