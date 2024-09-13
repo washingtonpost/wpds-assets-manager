@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.5.0...v2.6.0) (2024-09-13)
+
+
+### Features
+
+* add post pulse logo ([#211](https://github.com/washingtonpost/wpds-assets-manager/issues/211)) ([7dc6c17](https://github.com/washingtonpost/wpds-assets-manager/commit/7dc6c17db68d81a7a58967433ec43aed96135798))
+
 ## [2.5.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.4.1...v2.5.0) (2024-07-22)
 
 
