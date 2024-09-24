@@ -1,11 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375">
-  <g clip-path="url(#a)">
-    <path fill="#CE2027" d="M250 375V125h250L250 375Z"/>
-    <path fill="#2165AD" d="M250 0v250H0L250 0Z"/>
-  </g>
-  <defs>
-    <clipPath id="a">
-      <path fill="#fff" d="M0 0h500v375H0z"/>
-    </clipPath>
-  </defs>
+<svg width="500" height="375" viewBox="0 0 500 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M250 0L0 250H250V0Z" fill="#2165AD"/>
+<path d="M250 375V125H500L250 375Z" fill="#CE2027"/>
 </svg>
