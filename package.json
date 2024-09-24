@@ -278,6 +278,18 @@
       "import": "./asset/election_redbackground.mjs",
       "require": "./asset/election_redbackground.js"
     },
+     "./asset/election-bluebackground": {
+      "import": "./asset/election-bluebackground.mjs",
+      "require": "./asset/election-bluebackground.js"
+    },
+    "./asset/election-default": {
+      "import": "./asset/election-default.mjs",
+      "require": "./asset/election-default.js"
+    },
+    "./asset/election-redbackground": {
+      "import": "./asset/election-redbackground.mjs",
+      "require": "./asset/election-redbackground.js"
+    },
     "./asset/elections": {
       "import": "./asset/elections.mjs",
       "require": "./asset/elections.js"
