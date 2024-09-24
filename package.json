@@ -921,10 +921,6 @@
     "./asset/postpulse": {
       "import": "./asset/postpulse.mjs",
       "require": "./asset/postpulse.js"
-    },
-    "./asset/": {
-      "import": "./asset/.mjs",
-      "require": "./asset/.js"
     }
   }
 }
