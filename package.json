@@ -1,6 +1,6 @@
 {
   "name": "@washingtonpost/wpds-assets",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "WPDS Assets Manager",
   "homepage": "https://build.washingtonpost.com/foundations/wam",
   "main": "./asset/index.js",
@@ -278,7 +278,7 @@
       "import": "./asset/election_redbackground.mjs",
       "require": "./asset/election_redbackground.js"
     },
-     "./asset/election-bluebackground": {
+    "./asset/election-bluebackground": {
       "import": "./asset/election-bluebackground.mjs",
       "require": "./asset/election-bluebackground.js"
     },

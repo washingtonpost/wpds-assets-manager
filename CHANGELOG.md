@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.6.0...v2.6.1) (2024-09-24)
+
+
+### Bug Fixes
+
+* patch election logo specifiers ([3267fb9](https://github.com/washingtonpost/wpds-assets-manager/commit/3267fb95971264d01c2599bb6f15e5de67c2afb3))
+
 ## [2.6.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.5.0...v2.6.0) (2024-09-13)
 
 
