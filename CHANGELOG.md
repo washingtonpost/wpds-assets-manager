@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.6.1...v2.6.2) (2024-09-24)
+
+
+### Bug Fixes
+
+* remove clip path from post pulse ([#216](https://github.com/washingtonpost/wpds-assets-manager/issues/216)) ([0cef359](https://github.com/washingtonpost/wpds-assets-manager/commit/0cef3590d8b1aec955ac294f4807eaf375cfe682))
+
 ## [2.6.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.6.0...v2.6.1) (2024-09-24)
 
 
