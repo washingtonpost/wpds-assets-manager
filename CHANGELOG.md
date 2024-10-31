@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.6.2...v2.7.0) (2024-10-31)
+
+
+### Features
+
+* adding thumbs up_down flag pepper and crossed swords ([#218](https://github.com/washingtonpost/wpds-assets-manager/issues/218)) ([ad3e055](https://github.com/washingtonpost/wpds-assets-manager/commit/ad3e05532c182a4c658339c672c6417641bd7486))
+
 ## [2.6.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.6.1...v2.6.2) (2024-09-24)
 
 
