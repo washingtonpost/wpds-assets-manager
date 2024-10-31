@@ -921,6 +921,30 @@
     "./asset/postpulse": {
       "import": "./asset/postpulse.mjs",
       "require": "./asset/postpulse.js"
+    },
+    "./asset/": {
+      "import": "./asset/.mjs",
+      "require": "./asset/.js"
+    },
+    "./asset/crossed-swords": {
+      "import": "./asset/crossed-swords.mjs",
+      "require": "./asset/crossed-swords.js"
+    },
+    "./asset/flag-filled": {
+      "import": "./asset/flag-filled.mjs",
+      "require": "./asset/flag-filled.js"
+    },
+    "./asset/pepper": {
+      "import": "./asset/pepper.mjs",
+      "require": "./asset/pepper.js"
+    },
+    "./asset/thumbs-down": {
+      "import": "./asset/thumbs-down.mjs",
+      "require": "./asset/thumbs-down.js"
+    },
+    "./asset/thumbs-up": {
+      "import": "./asset/thumbs-up.mjs",
+      "require": "./asset/thumbs-up.js"
     }
   }
 }
