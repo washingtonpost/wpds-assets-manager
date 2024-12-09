@@ -9,6 +9,6 @@
 3. Click the "Upload" button
 4. Visit Github to see your changes
 
-## Themeing
+## Theming
 
 - Branded logos will use WPDS Theme Colors
