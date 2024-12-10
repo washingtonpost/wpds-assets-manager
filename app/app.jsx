@@ -35,8 +35,8 @@ const App = () => {
       {Object.keys(AllAssets).map((Asset) => {
         const Component = AllAssets[Asset];
         return (
-          <article key={Asset}>
-            <h2>{Asset}</h2>
+          <article key={Asset} href={`#${Asset}`}>
+            <h2 id={`#${Asset}`}>{Asset}</h2>
             <AssetContainer>
               <Component />
             </AssetContainer>
