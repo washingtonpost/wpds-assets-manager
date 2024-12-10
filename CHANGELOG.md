@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.7.0...v2.8.0) (2024-12-10)
+
+
+### Features
+
+* themed logos [CFE-75] ([#220](https://github.com/washingtonpost/wpds-assets-manager/issues/220)) ([fb70645](https://github.com/washingtonpost/wpds-assets-manager/commit/fb7064556352c496c1f3e86c3574735cb09c2822))
+
 ## [2.7.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.6.2...v2.7.0) (2024-10-31)
 
 
