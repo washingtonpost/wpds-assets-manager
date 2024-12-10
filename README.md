@@ -11,4 +11,8 @@
 
 ## Theming
 
-- Branded logos will use WPDS Theme Colors
+Branded logos will use WPDS Theme Colors like so where a CSS property/variable is used with a fallback hex code.
+
+```html
+fill="var(--wpds-colors-primary, #111)"
+```
