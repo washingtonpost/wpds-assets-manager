@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.8.0...v2.9.0) (2024-12-10)
+
+
+### Features
+
+* add more logos for theming ([#222](https://github.com/washingtonpost/wpds-assets-manager/issues/222)) ([2c0822a](https://github.com/washingtonpost/wpds-assets-manager/commit/2c0822a469a2f7e782d7e6924e2a8dabc08676de))
+
 ## [2.8.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.7.0...v2.8.0) (2024-12-10)
 
 
