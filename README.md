@@ -4,10 +4,13 @@
 
 ## How to Upload New Assets
 
-1. Visit [our upload page](https://wpds-assets-manager.preview.now.washingtonpost.com/upload).
-2. Drag and drop your assets into the upload area
-3. Click the "Upload" button
-4. Visit Github to see your changes
+1. Add the new logo or icon which you received from Design to the `./src` directory.
+2. Run `npm run build`
+3. Open a PR with your change and then ask for help in #wpds for a review
+
+## Formatting your SVG
+
+We have standardized on using viewBox over width & height attributes.
 
 ## Theming
 
