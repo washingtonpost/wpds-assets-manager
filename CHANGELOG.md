@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.9.0...v2.10.0) (2025-01-23)
+
+
+### Features
+
+* add wpi assets ([#225](https://github.com/washingtonpost/wpds-assets-manager/issues/225)) ([9754ec0](https://github.com/washingtonpost/wpds-assets-manager/commit/9754ec0ad85ee014e1684c1ce3a4195696db0a16))
+
 ## [2.9.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.8.0...v2.9.0) (2024-12-10)
 
 
