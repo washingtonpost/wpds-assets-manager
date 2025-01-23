@@ -945,6 +945,14 @@
     "./asset/thumbs-up": {
       "import": "./asset/thumbs-up.mjs",
       "require": "./asset/thumbs-up.js"
+    },
+    "./asset/wpi": {
+      "import": "./asset/wpi.mjs",
+      "require": "./asset/wpi.js"
+    },
+    "./asset/wpi-white": {
+      "import": "./asset/wpi-white.mjs",
+      "require": "./asset/wpi-white.js"
     }
   }
 }
