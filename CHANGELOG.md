@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.10.0...v2.10.1) (2025-01-30)
+
+
+### Bug Fixes
+
+* fix wpi logo ([#227](https://github.com/washingtonpost/wpds-assets-manager/issues/227)) ([b5d4448](https://github.com/washingtonpost/wpds-assets-manager/commit/b5d4448721cd7c1b8ea50c286d7cb78d24a6096f))
+
 ## [2.10.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.9.0...v2.10.0) (2025-01-23)
 
 
