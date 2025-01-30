@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.10.1...v2.10.2) (2025-01-30)
+
+
+### Bug Fixes
+
+* fill again ([9712fdd](https://github.com/washingtonpost/wpds-assets-manager/commit/9712fdd9aa09651974a09d7d6f9149a2ec0b6b82))
+
 ## [2.10.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.10.0...v2.10.1) (2025-01-30)
 
 
