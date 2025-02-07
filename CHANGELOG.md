@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.10.2...v2.11.0) (2025-02-07)
+
+
+### Features
+
+* add wridges icon ([#230](https://github.com/washingtonpost/wpds-assets-manager/issues/230)) ([df9853b](https://github.com/washingtonpost/wpds-assets-manager/commit/df9853b5a037b5902254f9977ab5619ac25da996))
+
 ## [2.10.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.10.1...v2.10.2) (2025-01-30)
 
 
