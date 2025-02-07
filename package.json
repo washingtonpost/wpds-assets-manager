@@ -953,6 +953,10 @@
     "./asset/wpi-white": {
       "import": "./asset/wpi-white.mjs",
       "require": "./asset/wpi-white.js"
+    },
+    "./asset/wridges": {
+      "import": "./asset/wridges.mjs",
+      "require": "./asset/wridges.js"
     }
   }
 }
