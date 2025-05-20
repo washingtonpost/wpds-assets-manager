@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.11.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.11.0...v2.11.1) (2025-05-20)
+
+
+### Bug Fixes
+
+* package export bug ([#238](https://github.com/washingtonpost/wpds-assets-manager/issues/238)) ([137057c](https://github.com/washingtonpost/wpds-assets-manager/commit/137057c34853aba7daa1574cef16aadd6efeb470))
+* update github action versions ([#239](https://github.com/washingtonpost/wpds-assets-manager/issues/239)) ([b1c1e9f](https://github.com/washingtonpost/wpds-assets-manager/commit/b1c1e9f8d7f572e34ff80d059668d38d8b5bb861))
+
 ## [2.11.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.10.2...v2.11.0) (2025-02-07)
 
 
