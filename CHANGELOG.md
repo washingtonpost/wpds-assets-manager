@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.11.1...v2.11.2) (2025-05-20)
+
+
+### Miscellaneous Chores
+
+* release 2.11.2 ([f9f1e92](https://github.com/washingtonpost/wpds-assets-manager/commit/f9f1e925970c0f370781c5e31ed1d0e381cc515d))
+
 ## [2.11.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.11.0...v2.11.1) (2025-05-20)
 
 
