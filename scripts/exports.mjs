@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import packageJson from "../package.json" assert { type: "json" };
+import packageJson from "../package.json" with { type: "json" };
 
 const files = await fs.readdir("src");
 
