@@ -86,6 +86,10 @@
       "import": "./asset/ai.mjs",
       "require": "./asset/ai.js"
     },
+    "./asset/ai-filled": {
+      "import": "./asset/ai-filled.mjs",
+      "require": "./asset/ai-filled.js"
+    },
     "./asset/amazon-music": {
       "import": "./asset/amazon-music.mjs",
       "require": "./asset/amazon-music.js"
