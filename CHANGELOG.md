@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.11.4...v2.12.0) (2025-05-23)
+
+
+### Features
+
+* add ai-filled icon ([e374e3f](https://github.com/washingtonpost/wpds-assets-manager/commit/e374e3f0ccc816faea86141f6ec583a91f881c34))
+
 ## [2.11.4](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.11.3...v2.11.4) (2025-05-21)
 
 
