@@ -946,6 +946,10 @@
       "import": "./asset/thumbs-up.mjs",
       "require": "./asset/thumbs-up.js"
     },
+    "./asset/wallet": {
+      "import": "./asset/wallet.mjs",
+      "require": "./asset/wallet.js"
+    },
     "./asset/wpi": {
       "import": "./asset/wpi.mjs",
       "require": "./asset/wpi.js"
