@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.13.0...v2.13.1) (2025-06-10)
+
+
+### Bug Fixes
+
+* fix viewbox for wallet icon we-169 ([e628d11](https://github.com/washingtonpost/wpds-assets-manager/commit/e628d111ad7dc6be7e32b6b2b8d589a11f0cf9b6))
+
 ## [2.13.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.12.0...v2.13.0) (2025-06-10)
 
 
