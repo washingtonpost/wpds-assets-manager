@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.12.0...v2.13.0) (2025-06-10)
+
+
+### Features
+
+* add wallet icon we-169 ([e3aa5fd](https://github.com/washingtonpost/wpds-assets-manager/commit/e3aa5fd4f8ffdbad89530fc1d9129d1873fb3720))
+
 ## [2.12.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.11.4...v2.12.0) (2025-05-23)
 
 
