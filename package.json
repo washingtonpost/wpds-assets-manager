@@ -961,6 +961,10 @@
     "./asset/wridges": {
       "import": "./asset/wridges.mjs",
       "require": "./asset/wridges.js"
+    },
+    "./asset/list": {
+      "import": "./asset/list.mjs",
+      "require": "./asset/list.js"
     }
   }
 }
