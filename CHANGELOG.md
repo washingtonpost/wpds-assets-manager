@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.1...v2.15.2) (2025-09-26)
+
+
+### Bug Fixes
+
+* make wpi-small logo scalable ([83cac24](https://github.com/washingtonpost/wpds-assets-manager/commit/83cac24448bbb08b7b8c70c0479a640ef45c18ed))
+
 ## [2.15.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.0...v2.15.1) (2025-09-26)
 
 
