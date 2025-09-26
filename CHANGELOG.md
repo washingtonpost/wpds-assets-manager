@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.14.0...v2.15.0) (2025-09-26)
+
+
+### Features
+
+* add wpi square logo [SITE-989] ([183bb07](https://github.com/washingtonpost/wpds-assets-manager/commit/183bb07aea48293f797290b80b9d775fb9806731))
+
 ## [2.14.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.13.1...v2.14.0) (2025-08-14)
 
 
