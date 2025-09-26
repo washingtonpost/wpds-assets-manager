@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.0...v2.15.1) (2025-09-26)
+
+
+### Bug Fixes
+
+* add wpi-mark logo to list ([84f87a6](https://github.com/washingtonpost/wpds-assets-manager/commit/84f87a610fb3c1a54425da7b19085e5372636acf))
+
 ## [2.15.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.14.0...v2.15.0) (2025-09-26)
 
 
