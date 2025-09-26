@@ -818,6 +818,10 @@
       "import": "./asset/wp-mark.mjs",
       "require": "./asset/wp-mark.js"
     },
+    "./asset/wpi-mark": {
+      "import": "./asset/wpi-mark.mjs",
+      "require": "./asset/wpi-mark.js"
+    },
     "./asset/wp": {
       "import": "./asset/wp.mjs",
       "require": "./asset/wp.js"
