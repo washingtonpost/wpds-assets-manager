@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.16.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.2...v2.16.0) (2026-04-24)
+
+
+### Features
+
+* add ripple beta asset ([95a012f](https://github.com/washingtonpost/wpds-assets-manager/commit/95a012f4924d20609be7700d31ffb63849e97f5a))
+* add ripple beta asset ([ccbe11a](https://github.com/washingtonpost/wpds-assets-manager/commit/ccbe11a8cab762eb8a876d5b00338a6753a67e4e))
+
 ## [2.15.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.1...v2.15.2) (2025-09-26)
 
 
