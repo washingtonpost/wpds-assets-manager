@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.16.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.1...v2.16.2) (2026-04-24)
+
+
+### Bug Fixes
+
+* formatting in README.md for SVG section ([d19016d](https://github.com/washingtonpost/wpds-assets-manager/commit/d19016d2bed6f204c5b6cddd22fa56595242bdea))
+
 ## [2.16.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.0...v2.16.1) (2026-04-24)
 
 
