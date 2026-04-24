@@ -10,7 +10,7 @@
 
 ## Formatting your SVG
 
-We have standardized on using viewBox over width & height attributes.
+We have standardized on using viewBox over width and height attributes.
 
 ## Theming
 
