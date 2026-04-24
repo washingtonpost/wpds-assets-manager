@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.16.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.0...v2.16.1) (2026-04-24)
+
+
+### Bug Fixes
+
+* typo in README regarding viewBox usage ([8a13173](https://github.com/washingtonpost/wpds-assets-manager/commit/8a13173835cb0759df1e951f8355040ac0aa36f5))
+
 ## [2.16.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.2...v2.16.0) (2026-04-24)
 
 
