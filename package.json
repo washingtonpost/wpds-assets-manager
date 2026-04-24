@@ -969,6 +969,10 @@
     "./asset/list": {
       "import": "./asset/list.mjs",
       "require": "./asset/list.js"
+    },
+    "./asset/ripple-beta": {
+      "import": "./asset/ripple-beta.mjs",
+      "require": "./asset/ripple-beta.js"
     }
   }
 }
