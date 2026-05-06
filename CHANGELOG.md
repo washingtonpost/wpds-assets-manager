@@ -1,5 +1,34 @@
 # Changelog
 
+## [2.16.3](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.2...v2.16.3) (2026-04-24)
+
+
+### Bug Fixes
+
+* formatting in README regarding SVG attributes ([36272f9](https://github.com/washingtonpost/wpds-assets-manager/commit/36272f9da2a3b6f3a3ccc7d22e8524b26f628a24))
+
+## [2.16.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.1...v2.16.2) (2026-04-24)
+
+
+### Bug Fixes
+
+* formatting in README.md for SVG section ([d19016d](https://github.com/washingtonpost/wpds-assets-manager/commit/d19016d2bed6f204c5b6cddd22fa56595242bdea))
+
+## [2.16.1](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.0...v2.16.1) (2026-04-24)
+
+
+### Bug Fixes
+
+* typo in README regarding viewBox usage ([8a13173](https://github.com/washingtonpost/wpds-assets-manager/commit/8a13173835cb0759df1e951f8355040ac0aa36f5))
+
+## [2.16.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.2...v2.16.0) (2026-04-24)
+
+
+### Features
+
+* add ripple beta asset ([95a012f](https://github.com/washingtonpost/wpds-assets-manager/commit/95a012f4924d20609be7700d31ffb63849e97f5a))
+* add ripple beta asset ([ccbe11a](https://github.com/washingtonpost/wpds-assets-manager/commit/ccbe11a8cab762eb8a876d5b00338a6753a67e4e))
+
 ## [2.15.2](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.15.1...v2.15.2) (2025-09-26)
 
 
