@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.17.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.3...v2.17.0) (2026-05-07)
+
+
+### Features
+
+* added ripple logo ([af82763](https://github.com/washingtonpost/wpds-assets-manager/commit/af82763c541370a25c06c42839c2f3e936ac36f1))
+
 ## [2.16.3](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.2...v2.16.3) (2026-04-24)
 
 
