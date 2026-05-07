@@ -973,6 +973,10 @@
     "./asset/ripple-beta": {
       "import": "./asset/ripple-beta.mjs",
       "require": "./asset/ripple-beta.js"
+    },
+    "./asset/ripple": {
+      "import": "./asset/ripple.mjs",
+      "require": "./asset/ripple.js"
     }
   }
 }
