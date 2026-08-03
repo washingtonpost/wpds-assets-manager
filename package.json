@@ -981,6 +981,10 @@
     "./asset/upvote": {
       "import": "./asset/upvote.mjs",
       "require": "./asset/upvote.js"
+    },
+    "./asset/upvote-filled": {
+      "import": "./asset/upvote-filled.mjs",
+      "require": "./asset/upvote-filled.js"
     }
   }
 }
