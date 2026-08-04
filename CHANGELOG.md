@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.18.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.17.0...v2.18.0) (2026-08-04)
+
+
+### Features
+
+* add sentiment upvote icon [SITE-2540] ([8fa3532](https://github.com/washingtonpost/wpds-assets-manager/commit/8fa35326903734467857acceac0f198e21a9ff86))
+* add sentiment upvote icon [SITE-2540] ([ab5e8f3](https://github.com/washingtonpost/wpds-assets-manager/commit/ab5e8f33621a7397f8ef875ef069b5eb18b56a66))
+
 ## [2.17.0](https://github.com/washingtonpost/wpds-assets-manager/compare/v2.16.3...v2.17.0) (2026-05-07)
 
 
