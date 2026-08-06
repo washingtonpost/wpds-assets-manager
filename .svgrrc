@@ -7,7 +7,6 @@ typescript: true
 filenameCase: kebab
 svgo: true
 prettier: true
-svgoConfig: { removeTitle: false }
 svgProps: { fill: "currentColor" }
 icon: false
 index: false
